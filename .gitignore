@@ -1,0 +1,5 @@
+elpa/
+projectile-bookmarks.eld
+auto-save-list/
+eshell/
+local-config/*.el
