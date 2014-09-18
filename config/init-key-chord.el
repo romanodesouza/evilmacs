@@ -7,6 +7,7 @@
 (key-chord-define-global ",k" 'kill-buffer)
 (key-chord-define-global ",q" 'quit-window)
 (key-chord-define-global ",i" 'imenu)
+(key-chord-define-global ",j" 'ace-jump-char-mode)
 (key-chord-define-global "aa" 'back-to-indentation)
 (key-chord-define-global "ee" 'end-of-line)
 (key-chord-define-global "ff" 'ag-project-regexp)

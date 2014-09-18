@@ -80,6 +80,7 @@
 (require 'init-yasnippet)
 (require 'init-key-chord)
 (require 'init-multiple-cursors)
+(require 'init-ace-jump-mode)
 ; Programming languages modes
 (require 'init-php-mode)
 (require 'init-go-mode)
