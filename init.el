@@ -90,6 +90,7 @@
 (add-hook 'java-mode-hook
           (lambda()
             (require 'init-java-mode)))
+(require 'init-yaml-mode)
 
 ;;
 ;; Local Config
