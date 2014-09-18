@@ -67,6 +67,7 @@
 (require 'init-elpa)
 (require 'init-linum-relative)
 (require 'init-smooth-scrolling)
+(require 'init-uniquify)
 (require 'init-projectile)
 (require 'init-evil-mode)
 (require 'init-smex)
