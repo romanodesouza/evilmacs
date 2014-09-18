@@ -9,6 +9,7 @@
 (key-chord-define-global ",i" 'imenu)
 (key-chord-define-global "aa" 'back-to-indentation)
 (key-chord-define-global "ee" 'end-of-line)
+(key-chord-define-global "ff" 'ag-project-regexp)
 
 ; Enable key-chord mode
 (key-chord-mode t)
