@@ -4,6 +4,11 @@
 (add-to-list 'load-path (expand-file-name "local-config" user-emacs-directory))
 
 ;;
+;; Global functions
+;
+(require 'init-functions)
+
+;;
 ;; Custom config
 ;
 ; Enable deletion of selected text
@@ -36,9 +41,6 @@
 ; Parens mode
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-; Font
-(defun fontify-frame (frame)
-  (set-frame-parameter frame 'font "Droid Sans Mono-11"))
 ; Fontify current frame
 (fontify-frame nil)
 ; Fontify any future frames
@@ -53,24 +55,11 @@
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
 (global-unset-key (kbd "C-z"))
-; Move like vim
-(global-set-key (kbd "C-l") 'forward-char)
-(global-set-key (kbd "C-h") 'backward-char)
-(global-set-key (kbd "C-j") 'forward-line)
-(global-set-key (kbd "C-k") 'ibuffer-backward-line)
+; BOL and EOL
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-e") 'end-of-line)
 ; Switch to previous buffer
 (global-set-key (kbd "C-x g") 'switch-to-previous-buffer)
-;;
-;; Common functions
-;
-(defun switch-to-previous-buffer ()
-  "Switch to previously open buffer.
-Repeated invocations toggle between the two most recently open buffers."
-  (interactive)
-  (switch-to-buffer (other-buffer (current-buffer) 1)))
-
 
 ;;
 ;; Packages
