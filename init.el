@@ -58,8 +58,8 @@
 ; BOL and EOL
 (global-set-key (kbd "C-a") 'back-to-indentation)
 (global-set-key (kbd "C-e") 'end-of-line)
-; Switch to previous buffer
-(global-set-key (kbd "C-x g") 'switch-to-previous-buffer)
+; Fuzzy finder
+(global-set-key (kbd "C-p") 'fuzzy-finder)
 
 ;;
 ;; Packages
