@@ -8,10 +8,6 @@
 ; Enable evil-nerd-commenter
 (evilnc-default-hotkeys)
 ; Key bindings
-(define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
-(define-key evil-normal-state-map (kbd "C-h") 'evil-window-prev)
-(define-key evil-normal-state-map (kbd "C-l") 'evil-window-next)
 (define-key evil-normal-state-map (kbd "C-p") 'fuzzy-finder)
 (define-key evil-insert-state-map (kbd "C-p") 'fuzzy-finder)
 

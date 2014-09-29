@@ -55,11 +55,10 @@
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
 (global-unset-key (kbd "C-z"))
-; BOL and EOL
-(global-set-key (kbd "C-a") 'back-to-indentation)
-(global-set-key (kbd "C-e") 'end-of-line)
-; Fuzzy finder
-(global-set-key (kbd "C-p") 'fuzzy-finder)
+; BOL
+(global-set-key (kbd "<home>") 'back-to-indentation)
+; Ace Jump Char Mode
+(global-set-key (kbd "C-j") 'ace-jump-char-mode)
 
 ;;
 ;; Packages

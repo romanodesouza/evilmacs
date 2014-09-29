@@ -6,7 +6,6 @@
 (key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",k" 'kill-buffer)
 (key-chord-define-global ",q" 'quit-window)
-(key-chord-define-global ",j" 'ace-jump-char-mode)
 (key-chord-define-global ",t" 'indent-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
 (key-chord-define-global "aa" 'back-to-indentation)
