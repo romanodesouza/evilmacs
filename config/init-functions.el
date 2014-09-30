@@ -1,7 +1,7 @@
 ; Font
 (defun fontify-frame (frame)
   "Set font face in the current frame."
-  (set-frame-parameter frame 'font "Droid Sans Mono-11"))
+  (set-frame-parameter frame 'font "Monospace-11"))
 
 ; Switch to previous buffer
 (defun switch-to-previous-buffer ()
