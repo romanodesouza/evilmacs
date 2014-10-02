@@ -47,6 +47,8 @@
 (push 'fontify-frame after-make-frame-functions)
 ; Highlight current line
 (global-hl-line-mode t)
+; Line spacing
+(setq-default line-spacing 3)
 
 ;;
 ;; Custom key bindings
