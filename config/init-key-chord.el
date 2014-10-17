@@ -8,8 +8,8 @@
 (key-chord-define-global ",q" 'quit-window)
 (key-chord-define-global ",t" 'indent-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
-(key-chord-define-global "aa" 'back-to-indentation)
-(key-chord-define-global "ee" 'end-of-line)
+(key-chord-define-global ",a" 'back-to-indentation)
+(key-chord-define-global ",e" 'end-of-line)
 
 ; Enable key-chord mode
 (key-chord-mode t)
