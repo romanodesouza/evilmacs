@@ -45,6 +45,8 @@
 (fontify-frame nil)
 ; Fontify any future frames
 (push 'fontify-frame after-make-frame-functions)
+; Set window size
+(set-frame-size-according-to-resolution)
 ; Highlight current line
 (global-hl-line-mode t)
 ; Line spacing
