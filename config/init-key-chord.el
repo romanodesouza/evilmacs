@@ -11,6 +11,7 @@
 (key-chord-define-global ",a" 'back-to-indentation)
 (key-chord-define-global ",e" 'end-of-line)
 (key-chord-define-global ",r" 'ido-goto-symbol)
+(key-chord-define-global ",d" 'helm-swoop)
 
 ; Enable key-chord mode
 (key-chord-mode t)
