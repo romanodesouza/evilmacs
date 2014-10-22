@@ -1,7 +1,7 @@
 ; Font
 (defun fontify-frame (frame)
   "Set font face in the current frame."
-  (set-frame-parameter frame 'font "Monospace-11"))
+  (set-frame-parameter frame 'font "Monospace-10"))
 
 ; Sets the window size
 ; Taken from: http://stackoverflow.com/a/94277/1787194
