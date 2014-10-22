@@ -75,6 +75,7 @@
 (require 'init-evil-mode)
 (require 'init-smex)
 (require 'init-ido)
+(require 'init-imenu)
 (require 'init-company-mode)
 (require 'init-expand-region)
 (require 'init-smartparens)
