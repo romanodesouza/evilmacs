@@ -43,4 +43,48 @@
   (interactive)
   (evil-ex "normal mzgg=G`zzz"))
 
+; Moving lines down
+(defun move-line-down ()
+  (interactive)
+  (let ((col (current-column)))
+    (save-excursion
+      (forward-line)
+      (transpose-lines 1))
+    (forward-line)
+    (move-to-column col)))
+
+; Moving lines up
+(defun move-line-up ()
+  (interactive)
+  (let ((col (current-column)))
+    (save-excursion
+      (forward-line)
+      (transpose-lines -1))
+    (move-to-column col)))
+
+; Open line below
+(defun open-line-below ()
+  (interactive)
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command))
+
+; Open line above
+(defun open-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (forward-line -1)
+  (indent-for-tab-command))
+
+; Scroll down 1 line
+(defun gcm-scroll-down ()
+  (interactive)
+  (scroll-up 1))
+
+; Scroll up 1 line
+(defun gcm-scroll-up ()
+  (interactive)
+  (scroll-down 1))
+
 (provide 'init-functions)

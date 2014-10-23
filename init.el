@@ -24,11 +24,11 @@
 ; Don't show me the startup screen
 (setq inhibit-startup-screen t)
 ; Disable menu bar
-(menu-bar-mode -1)
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 ; Disable tool bar
-(tool-bar-mode -1)
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 ; Disable scroll bar
-(scroll-bar-mode -1)
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 ; Encoding
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
@@ -63,6 +63,16 @@
 (global-set-key (kbd "<home>") 'back-to-indentation)
 ; Ace Jump Char Mode
 (global-set-key (kbd "C-j") 'ace-jump-char-mode)
+; Moving line
+(global-set-key (kbd "<C-S-down>") 'move-line-down)
+(global-set-key (kbd "<C-S-up>") 'move-line-up)
+; Opening lines
+(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
+; Scrolling 1 line
+(global-set-key (kbd "<C-down>") 'gcm-scroll-down)
+(global-set-key (kbd "<C-up>") 'gcm-scroll-up)
+
 
 ;;
 ;; Packages
