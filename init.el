@@ -97,15 +97,11 @@
 (require 'init-multiple-cursors)
 (require 'init-ace-jump-mode)
 ; Programming languages modes
-(require 'init-php-mode)
 (require 'init-go-mode)
 (require 'init-javascript-mode)
 (add-hook 'python-mode-hook
           (lambda()
             (require 'init-python-mode)))
-(add-hook 'java-mode-hook
-          (lambda()
-            (require 'init-java-mode)))
 (require 'init-yaml-mode)
 
 ;;
