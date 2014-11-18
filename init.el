@@ -4,22 +4,17 @@
 (add-to-list 'load-path (expand-file-name "local-config" user-emacs-directory))
 
 ;;
-;; Global functions
-;
-(require 'init-functions)
-
-;;
 ;; Custom config
 ;
 ; Enable deletion of selected text
 (delete-selection-mode 1)
 ; Disable backup
-(setq backup-inhibited t)
+(setq make-backup-files nil)
 ; Disable auto saving
 (setq auto-save-default nil)
 ; Default indentation
 (setq-default tab-width 4)
-(setq-default indent-tabs-mode t)
+(setq-default indent-tabs-mode nil)
 (electric-indent-mode t)
 ; Don't show me the startup screen
 (setq inhibit-startup-screen t)
@@ -41,61 +36,35 @@
 ; Parens mode
 (show-paren-mode 1)
 (setq show-paren-delay 0)
-; Fontify current frame
-(fontify-frame nil)
-; Fontify any future frames
-(push 'fontify-frame after-make-frame-functions)
-; Set window size
-(set-frame-size-according-to-resolution)
-; Highlight current line
-(global-hl-line-mode t)
 ; Line spacing
 (setq-default line-spacing 3)
+; Inital message in *scratch* buffer
+(setq-default initial-scratch-message "; Emacs + evil rocks!! ;D")
 
 ;;
 ;; Custom key bindings
 ;
-; Disable the Ctrl+Z to void put Emacs on background job
-; Notice that the evil-mode might override this setting to
-; switch between evil/emacs mode
-(global-unset-key (kbd "C-z"))
-; BOL
-(global-set-key (kbd "<home>") 'back-to-indentation)
-; Ace Jump Char Mode
-(global-set-key (kbd "C-j") 'ace-jump-char-mode)
-; Moving line
-(global-set-key (kbd "<C-S-down>") 'move-line-down)
-(global-set-key (kbd "<C-S-up>") 'move-line-up)
-; Opening lines
-(global-set-key (kbd "<C-return>") 'open-line-below)
-(global-set-key (kbd "<C-S-return>") 'open-line-above)
-; Scrolling 1 line
-(global-set-key (kbd "<C-down>") 'gcm-scroll-down)
-(global-set-key (kbd "<C-up>") 'gcm-scroll-up)
-
+(require 'init-key-bindings)
 
 ;;
 ;; Packages
 ;
 (require 'init-elpa)
+(require 'init-projectile)
+(require 'init-evil-mode)
 (require 'init-linum-relative)
 (require 'init-smooth-scrolling)
 (require 'init-uniquify)
-(require 'init-projectile)
-(require 'init-evil-mode)
 (require 'init-smex)
 (require 'init-ido)
 (require 'init-helm)
-(require 'init-imenu)
 (require 'init-company-mode)
 (require 'init-expand-region)
-(require 'init-smartparens)
 (require 'init-flycheck)
 (require 'init-ag)
 (require 'init-yasnippet)
 (require 'init-key-chord)
 (require 'init-multiple-cursors)
-(require 'init-ace-jump-mode)
 ; Programming languages modes
 (require 'init-go-mode)
 (require 'init-javascript-mode)

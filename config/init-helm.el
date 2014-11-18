@@ -6,7 +6,6 @@
 
 (require-package 'helm)
 (require-package 'helm-swoop)
-
 (require 'helm-config)
 
 (provide 'init-helm)
