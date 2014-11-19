@@ -4,6 +4,9 @@
 
 (anaconda-mode)
 (pyenv-mode)
-(add-to-list 'company-backends 'company-anaconda)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (set (make-local-variable 'company-backends)
+                 '((company-anaconda company-yasnippet)))))
 
 (provide 'init-python-mode)

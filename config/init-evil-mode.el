@@ -17,7 +17,7 @@
 (define-key evil-insert-state-map "\C-l" 'right-char)
 (define-key evil-insert-state-map "\C-k" 'previous-line)
 (define-key evil-insert-state-map "\C-j" 'next-line)
-(define-key evil-insert-state-map (kbd "<tab>") 'tab-to-tab-stop)
+(define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 
 (provide 'init-evil-mode)
