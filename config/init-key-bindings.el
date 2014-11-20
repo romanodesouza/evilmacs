@@ -1,3 +1,5 @@
+; Emacs key bindings
+;
 ; Disable the Ctrl+Z to void put Emacs on background job
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
@@ -14,8 +16,24 @@
 ; Scrolling 1 line
 (global-set-key (kbd "<C-down>") 'gcm-scroll-down)
 (global-set-key (kbd "<C-up>") 'gcm-scroll-up)
-;; Enter for new line and indent
+; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
+; Find in files
+(global-set-key (kbd "C-S-p") 'ag-project-regexp)
+
+; Evil key bindings
+;
+(define-key evil-normal-state-map (kbd "C-S-j") 'move-line-down)
+(define-key evil-normal-state-map (kbd "C-S-k") 'move-line-up)
+(define-key evil-normal-state-map "\C-p" 'fuzzy-finder)
+(define-key evil-insert-state-map "\C-p" 'fuzzy-finder)
+(define-key evil-insert-state-map "\C-e" 'end-of-line)
+(define-key evil-insert-state-map "\C-h" 'left-char)
+(define-key evil-insert-state-map "\C-l" 'right-char)
+(define-key evil-insert-state-map "\C-k" 'previous-line)
+(define-key evil-insert-state-map "\C-j" 'next-line)
+(define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
+(define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 
 ; Moving lines down
 (defun move-line-down ()

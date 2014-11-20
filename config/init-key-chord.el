@@ -1,14 +1,13 @@
 (require-package 'key-chord)
 
-(key-chord-define-global ",f" 'ag-project-regexp)
-(key-chord-define-global ",s" 'save-buffer-and-goes-to-normal-mode)
-(key-chord-define-global ",g" 'switch-to-previous-buffer)
-(key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",q" 'quit-window)
+(key-chord-define-global ",s" 'save-buffer-and-goes-to-normal-mode)
+(key-chord-define-global ",d" 'ido-goto-symbol)
+(key-chord-define-global ",f" 'helm-swoop)
+(key-chord-define-global ",g" 'switch-to-previous-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
-(key-chord-define-global ",r" 'ido-goto-symbol)
 (key-chord-define-global ",c" 'evil-ace-jump-char-mode)
-(key-chord-define-global "//" 'helm-swoop)
+(key-chord-define-global ",b" 'switch-to-buffer)
 
 ; Enable key-chord mode
 (key-chord-mode t)

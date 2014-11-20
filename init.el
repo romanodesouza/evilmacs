@@ -42,15 +42,11 @@
 (setq-default initial-scratch-message "; Emacs + evil rocks!! ;D")
 
 ;;
-;; Custom key bindings
-;
-(require 'init-key-bindings)
-
-;;
 ;; Packages
 ;
 (require 'init-elpa)
 (require 'init-projectile)
+(require 'init-ace-jump-mode)
 (require 'init-evil-mode)
 (require 'init-linum-relative)
 (require 'init-smooth-scrolling)
@@ -65,13 +61,21 @@
 (require 'init-yasnippet)
 (require 'init-key-chord)
 (require 'init-multiple-cursors)
-; Programming languages modes
+
 (require 'init-go-mode)
-(require 'init-javascript-mode)
+(add-hook 'js-mode-hook
+          (lambda ()
+            (require 'init-javascript-mode)))
 (add-hook 'python-mode-hook
-          (lambda()
+          (lambda ()
             (require 'init-python-mode)))
 (require 'init-yaml-mode)
+
+;;
+;; Custom key bindings
+;
+(require 'init-key-bindings)
+
 
 ;;
 ;; Local Config
