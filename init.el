@@ -63,9 +63,7 @@
 (require 'init-multiple-cursors)
 
 (require 'init-go-mode)
-(add-hook 'js-mode-hook
-          (lambda ()
-            (require 'init-javascript-mode)))
+(require 'init-javascript-mode)
 (add-hook 'python-mode-hook
           (lambda ()
             (require 'init-python-mode)))
