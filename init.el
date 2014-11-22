@@ -9,7 +9,7 @@
 ; Enable deletion of selected text
 (delete-selection-mode 1)
 ; Disable backup
-(setq make-backup-files nil)
+(setq-default make-backup-files nil)
 ; Disable auto saving
 (setq auto-save-default nil)
 ; Default indentation
@@ -18,6 +18,11 @@
 (electric-indent-mode t)
 ; Don't show me the startup screen
 (setq inhibit-startup-screen t)
+; Show column number in mode line
+(setq column-number-mode t)
+; Don't ring at error
+(setq ring-bell-function 'ignore)
+(setq visible-bell 'top-bottom)
 ; Disable menu bar
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 ; Disable tool bar
@@ -63,9 +68,7 @@
 (require 'init-multiple-cursors)
 
 (require 'init-go-mode)
-(add-hook 'js-mode-hook
-          (lambda ()
-            (require 'init-javascript-mode)))
+(require 'init-javascript-mode)
 (add-hook 'python-mode-hook
           (lambda ()
             (require 'init-python-mode)))
