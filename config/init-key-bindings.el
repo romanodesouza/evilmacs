@@ -8,14 +8,14 @@
 (global-set-key (kbd "<home>") 'back-to-indentation)
 (global-set-key (kbd "\C-a") 'back-to-indentation)
 ; Moving line
-(global-set-key (kbd "<C-S-down>") 'move-line-down)
-(global-set-key (kbd "<C-S-up>") 'move-line-up)
+(global-set-key (kbd "<M-S-down>") 'move-text-down)
+(global-set-key (kbd "<M-S-up>") 'move-text-up)
 ; Opening lines
 (global-set-key (kbd "<C-return>") 'open-line-below)
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
 ; Scrolling 1 line
-(global-set-key (kbd "<C-down>") 'gcm-scroll-down)
-(global-set-key (kbd "<C-up>") 'gcm-scroll-up)
+(global-set-key (kbd "<M-down>") 'gcm-scroll-down)
+(global-set-key (kbd "<M-up>") 'gcm-scroll-up)
 ; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
 ; Find in files
@@ -23,36 +23,13 @@
 
 ; Evil key bindings
 ;
-(define-key evil-normal-state-map (kbd "C-S-j") 'move-line-down)
-(define-key evil-normal-state-map (kbd "C-S-k") 'move-line-up)
 (define-key evil-normal-state-map "\C-p" 'fuzzy-finder)
 (define-key evil-insert-state-map "\C-p" 'fuzzy-finder)
+(define-key evil-insert-state-map "\C-d" 'evil-delete-char)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
-(define-key evil-insert-state-map "\C-h" 'left-char)
-(define-key evil-insert-state-map "\C-l" 'right-char)
-(define-key evil-insert-state-map "\C-k" 'previous-line)
-(define-key evil-insert-state-map "\C-j" 'next-line)
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 
-; Moving lines down
-(defun move-line-down ()
-  (interactive)
-  (let ((col (current-column)))
-    (save-excursion
-      (forward-line)
-      (transpose-lines 1))
-    (forward-line)
-    (move-to-column col)))
-
-; Moving lines up
-(defun move-line-up ()
-  (interactive)
-  (let ((col (current-column)))
-    (save-excursion
-      (forward-line)
-      (transpose-lines -1))
-    (move-to-column col)))
 
 ; Open line below
 (defun open-line-below ()
@@ -78,6 +55,48 @@
 (defun gcm-scroll-up ()
   (interactive)
   (scroll-down 1))
+
+(defun move-text-internal (arg)
+  "Move region (transient-mark-mode active) or current line."
+  (let ((remember-point (point)))
+    ;; Can't get correct effect of `transpose-lines'
+    ;; when `point-max' is not at beginning of line
+    ;; So fix this bug.
+    (goto-char (point-max))
+    (if (not (bolp)) (newline))         ;add newline to fix
+    (goto-char remember-point)
+    ;; logic code start
+    (cond ((and mark-active transient-mark-mode)
+           (if (> (point) (mark))
+             (exchange-point-and-mark))
+           (let ((column (current-column))
+                 (text (delete-and-extract-region (point) (mark))))
+             (forward-line arg)
+             (move-to-column column t)
+             (set-mark (point))
+             (insert text)
+             (exchange-point-and-mark)
+             (setq deactivate-mark nil)))
+          (t
+            (let ((column (current-column)))
+              (beginning-of-line)
+              (when (or (> arg 0) (not (bobp)))
+                (forward-line 1)
+                (when (or (< arg 0) (not (eobp)))
+                  (transpose-lines arg))
+                (forward-line -1))
+              (move-to-column column t))
+            ))))
+
+(defun move-text-up (arg)
+  "Move region (transient-mark-mode active) or current line ARG lines up."
+  (interactive "*p")
+  (move-text-internal (- arg)))
+
+(defun move-text-down (arg)
+  "Move region (transient-mar-mode active) or current line (ARG lines) down."
+  (interactive "*p")
+  (move-text-internal arg))
 
 
 (provide 'init-key-bindings)
