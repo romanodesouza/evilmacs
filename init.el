@@ -50,35 +50,35 @@
 ;; Packages
 ;
 (require 'init-elpa)
-(require 'init-projectile)
-(require 'init-ace-jump-mode)
+
 (require 'init-evil-mode)
+(require 'init-ace-jump-mode)
 (require 'init-linum-relative)
+(require 'init-projectile)
+(require 'init-expand-region)
+(require 'init-multiple-cursors)
+(require 'init-ag)
+
 (require 'init-smooth-scrolling)
 (require 'init-uniquify)
 (require 'init-smex)
 (require 'init-ido)
 (require 'init-helm)
+
 (require 'init-company-mode)
-(require 'init-expand-region)
 (require 'init-flycheck)
-(require 'init-ag)
 (require 'init-yasnippet)
-(require 'init-key-chord)
-(require 'init-multiple-cursors)
 
 (require 'init-go-mode)
 (require 'init-javascript-mode)
-(add-hook 'python-mode-hook
-          (lambda ()
-            (require 'init-python-mode)))
+(add-hook 'python-mode-hook (lambda () (require 'init-python-mode)))
 (require 'init-yaml-mode)
 
 ;;
 ;; Custom key bindings
 ;
+(require 'init-key-chord)
 (require 'init-key-bindings)
-
 
 ;;
 ;; Local Config

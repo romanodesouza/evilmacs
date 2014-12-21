@@ -1,5 +1,9 @@
 (require-package 'evil)
 (require-package 'evil-nerd-commenter)
+(require-package 'evil-jumper)
+(require-package 'evil-visualstar)
+(require 'evil-jumper)
+(require 'evil-visualstar)
 
 ; Config
 (setq evil-search-module 'evil-search)

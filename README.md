@@ -26,10 +26,10 @@ The specific requirements are listed below. At here you will need to install Ema
 | `Ctrl+>`                  | Multiple cursors: Selects next like this selection                          | y             | y             | y             |
 | `Ctrl+<`                  | Multiple cursors: Selects previous like this selection                      | y             | y             | y             |
 | `Ctrl+,`                  | Multiple cursors: Selects all like this selection                           | y             | y             | y             |
-| `,+q`                     | **q** uit window(actually kills current buffer)                             | y             | y             | y             |
+| `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
+| `,+a`                     | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | `,+s`                     | **s** ave and goes to normal mode                                           | y             | y             | y             |
 | `,+d`                     | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
-| `,+f`                     | **f** ind occurrences in current buffer                                     | y             | y             | y             |
 | `,+g`                     | To **g** gle with last opened buffer                                        | y             | y             | y             |
 | `,+h`                     | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
 | `,+c`                     | Ace jump **c** har mode                                                     | y             | y             | y             |

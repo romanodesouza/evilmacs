@@ -23,10 +23,12 @@
 
 ; Evil key bindings
 ;
-(define-key evil-normal-state-map "\C-p" 'fuzzy-finder)
-(define-key evil-insert-state-map "\C-p" 'fuzzy-finder)
+(define-key evil-normal-state-map "\C-p" 'fuzzy-file-finder)
+(define-key evil-insert-state-map "\C-p" 'fuzzy-file-finder)
+
 (define-key evil-insert-state-map "\C-d" 'evil-delete-char)
 (define-key evil-insert-state-map "\C-e" 'end-of-line)
+
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 

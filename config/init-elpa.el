@@ -1,6 +1,7 @@
 (setq package-archives '(
   ("melpa-stable" . "http://melpa-stable.milkbox.net/packages/")
   ("melpa" . "http://melpa.milkbox.net/packages/")
+  ("elpa" . "https://elpa.gnu.org/packages/")
 ))
 (setq package-enable-at-startup nil)
 (defvar packages-refreshed nil)
