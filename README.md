@@ -23,9 +23,6 @@ The specific requirements are listed below. At here you will need to install Ema
 | `Ctrl+Shift+Return`       | Open new line above                                                         | y             | y             | y             |
 | `Ctrl+=`                  | Expand selection                                                            | y             | y             | y             |
 | `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
-| `Ctrl+>`                  | Multiple cursors: Selects next like this selection                          | y             | y             | y             |
-| `Ctrl+<`                  | Multiple cursors: Selects previous like this selection                      | y             | y             | y             |
-| `Ctrl+,`                  | Multiple cursors: Selects all like this selection                           | y             | y             | y             |
 | `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
 | `,+a`                     | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | `,+s`                     | **s** ave and goes to normal mode                                           | y             | y             | y             |
