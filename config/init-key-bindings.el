@@ -1,34 +1,25 @@
-; Emacs key bindings
-;
+; Enable CUA mode for better ergonomics
+(cua-mode t)
 ; Disable the Ctrl+Z to void put Emacs on background job
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
 (global-unset-key (kbd "C-z"))
-; BOL
-(global-set-key (kbd "<home>") 'back-to-indentation)
-(global-set-key (kbd "\C-a") 'back-to-indentation)
-; Moving line
-(global-set-key (kbd "<M-S-down>") 'move-text-down)
-(global-set-key (kbd "<M-S-up>") 'move-text-up)
-; Opening lines
-(global-set-key (kbd "<C-return>") 'open-line-below)
-(global-set-key (kbd "<C-S-return>") 'open-line-above)
-; Scrolling 1 line
-(global-set-key (kbd "<M-down>") 'gcm-scroll-down)
-(global-set-key (kbd "<M-up>") 'gcm-scroll-up)
 ; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
 ; Find in files
 (global-set-key (kbd "C-S-p") 'ag-project-regexp)
 
 ; Evil key bindings
-;
-(define-key evil-normal-state-map "\C-p" 'fuzzy-file-finder)
-(define-key evil-insert-state-map "\C-p" 'fuzzy-file-finder)
-
-(define-key evil-insert-state-map "\C-d" 'evil-delete-char)
-(define-key evil-insert-state-map "\C-e" 'end-of-line)
-
+(define-key evil-normal-state-map (kbd "C-p") 'file-fuzzy-finder)
+(define-key evil-insert-state-map (kbd "C-p") 'file-fuzzy-finder)
+(define-key evil-normal-state-map (kbd "C-j") 'gcm-scroll-down)
+(define-key evil-normal-state-map (kbd "C-k") 'gcm-scroll-up)
+(define-key evil-normal-state-map (kbd "M-h") 'evil-window-left)
+(define-key evil-normal-state-map (kbd "M-l") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "C-S-l") 'evil-window-move-far-right)
+(define-key evil-normal-state-map (kbd "C-S-h") 'evil-window-move-far-left)
+(define-key evil-normal-state-map (kbd "C-l") 'forward-word)
+(define-key evil-normal-state-map (kbd "C-h") 'backward-word)
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 

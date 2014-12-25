@@ -8,6 +8,7 @@
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
 (key-chord-define-global ",c" 'evil-ace-jump-char-mode)
 (key-chord-define-global ",b" 'switch-to-buffer)
+(key-chord-define-global ",v" 'evil-window-vsplit)
 
 ; Enable key-chord mode
 (key-chord-mode t)

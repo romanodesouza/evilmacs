@@ -9,20 +9,23 @@ Emacs is another great editor, fully responsive and fast, but its bindings isn't
 Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim emulator made ever. With it we can have a sweet experience feeling like home. The plugin is developed by advanced vim users and the Emacs's extensibility makes this possible.
 
 ## Requirements
-The specific requirements are listed below. At here you will need to install Emacs >=24.
+The specific requirements are listed below. From here you need to install Emacs >=24.
 
 ## Custom key bindings
 | Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
 | `Ctrl+p`                  | Find files                                                                  | y             | y             | y             |
 | `Ctrl+Shift+p`            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
-| `Ctrl+a`                  | Goes to first non blank character of line                                   | y             | y             | y             |
-| `Ctrl+e`                  | Goes to end of line                                                         | y             | n             | n             |
-| `Ctrl+d`                  | Deletes next char                                                           | y             | n             | n             |
-| `Ctrl+Return`             | Open new line below                                                         | y             | y             | y             |
-| `Ctrl+Shift+Return`       | Open new line above                                                         | y             | y             | y             |
 | `Ctrl+=`                  | Expand selection                                                            | y             | y             | y             |
 | `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
+| `Ctrl+k`                  | Scrolls one screen line up                                                  | n             | y             | n             |
+| `Ctrl+j`                  | Scrolls one screen line down                                                | n             | y             | n             |
+| `Ctrl+l`                  | Forwards one word                                                           | n             | y             | n             |
+| `Ctrl+h`                  | Backwards one word                                                          | n             | y             | n             |
+| `Ctrl+Shift+l`            | Shifts window to the right                                                  | n             | y             | n             |
+| `Ctrl+Shift+h`            | Shifts window to the left                                                   | n             | y             | n             |
+| `Meta+l`                  | Jumps to window in the left                                                 | n             | y             | n             |
+| `Meta+h`                  | Jumps to window in the right                                                | n             | y             | n             |
 | `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
 | `,+a`                     | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | `,+s`                     | **s** ave and goes to normal mode                                           | y             | y             | y             |
@@ -31,11 +34,8 @@ The specific requirements are listed below. At here you will need to install Ema
 | `,+h`                     | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
 | `,+c`                     | Ace jump **c** har mode                                                     | y             | y             | y             |
 | `,+b`                     | Switch to **b** uffer                                                       | y             | y             | y             |
-| `<tab>`                   | Expand snippet or print tab stop                                            | y             | y             | y             |
-| `Meta+up`                 | Scrolls one screen line up                                                  | y             | y             | y             |
-| `Meta+down`               | Scrolls one screen line down                                                | y             | y             | y             |
-| `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
-| `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
+| `,+v`                     | **v** ertical split                                                         | y             | y             | y             |
+| `<tab>`                   | Expand snippet or print a tab stop                                          | y             | y             | y             |
 
 where `Meta` could be `Alt` or `Command` depending on OS or personal config.
 
@@ -93,6 +93,57 @@ by creating a file `local-config/init-local-config.el`. Something like that:
 (load-theme 'solarized-light t)
 
 (provide 'init-local-config)
+```
+
+## Ergonomics
+If you're curious and feeling confidence to try out Emacs's default keybindings, I have to advice you to be careful with RSI!!
+The **great** project [Ergoemacs](http://ergoemacs.org/) isn't just a remap of keybindings for Window users, but a great work to try to protect you against the painful Emac's keybindings.
+If you don't wanna to try it out, check out this basic bindings and put it in your `init-local-config.el`:
+
+```lisp
+  (global-set-key (kbd "C-a") 'mark-whole-buffer)
+  (global-set-key (kbd "C-s") 'save-buffer)
+  (global-set-key (kbd "C-f") 'helm-swoop)
+  (global-set-key (kbd "C-r") 'helm-semantic-or-imenu)
+  (global-set-key (kbd "C-d") 'duplicate-line)
+  (local-set-key (kbd "C-d") 'duplicate-line)
+
+  (global-set-key (kbd "C-S-f") 'ag-project-regexp)
+  (global-set-key (kbd "C-S-n") 'fuzzy-file-finder)
+  (global-set-key (kbd "C-S-b") 'ibuffer)
+
+  (global-set-key [escape] 'keyboard-quit) 
+  (define-key yas-minor-mode-map (kbd "<tab>") 'my-company-tab)
+  (global-set-key (kbd "<backtab>") 'un-indent-by-removing-4-spaces)
+  (global-set-key (kbd "<f5>") 'revert-buffer)
+  (global-set-key (kbd "<S-delete>") 'kill-whole-line)
+  (global-set-key (kbd "<M-S-down>") 'move-text-down)
+  (global-set-key (kbd "<M-S-up>") 'move-text-up)
+  (global-set-key (kbd "<C-return>") 'open-line-below)
+  (global-set-key (kbd "<C-S-return>") 'open-line-above)
+  (global-set-key (kbd "<C-down>") 'gcm-scroll-down)
+  (global-set-key (kbd "<C-up>") 'gcm-scroll-up))
+
+(defun un-indent-by-removing-4-spaces ()
+  "remove 4 spaces from beginning of of line"
+  (interactive)
+  (save-excursion
+    (save-match-data
+      (beginning-of-line)
+      ;; get rid of tabs at beginning of line
+      (when (looking-at "^\\s-+")
+        (untabify (match-beginning 0) (match-end 0)))
+      (when (looking-at "^    ")
+        (replace-match "")))))
+
+(defun duplicate-line ()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
 ```
 
 ## License
