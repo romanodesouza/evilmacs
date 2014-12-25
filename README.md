@@ -3,7 +3,7 @@ Emacs settings for vim users.
 
 ## Motivation
 Vim is a great and powerful editor with awesome and clever motions for fast editing, but when you intend to use it like an ide with some plugins, it becomes slow, mainly because its lack of asynchronous I/O.
-Emacs is another great editor, fully responsive and fast, but its bindings isn't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
+Emacs is another great editor, fully responsive and fast, but its bindings isn't fluent and [ergonomic](#ergonomics) like vim. This is a try to bring the best of both worlds.
 
 ## How?
 Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim emulator made ever. With it we can have a sweet experience feeling like home. The plugin is developed by advanced vim users and the Emacs's extensibility makes this possible.
@@ -96,9 +96,11 @@ by creating a file `local-config/init-local-config.el`. Something like that:
 ```
 
 ## Ergonomics
-If you're curious and feeling confidence to try out Emacs's default keybindings, I have to advice you to be careful with RSI!!
-The **great** project [Ergoemacs](http://ergoemacs.org/) isn't just a remap of keybindings for Window users, but a great work to try to protect you against the painful Emac's keybindings.
-If you don't wanna to try it out, check out this basic bindings and put it in your `init-local-config.el`:
+In a near future, if you got fascinated with the power of Emacs, curious and feeling confidence to try out Emacs's default keybindings, I have to advice you to be careful with RSI!!
+There is a **great** project called "[Ergoemacs](http://ergoemacs.org/)" that isn't just a remap of keybindings for Windows users, but a wonderful work to try to protect you against the painful Emacs's keybindings. In its wiki there is a list showing many people that got a RSI using Emacs in a QWERTY keyboard layout.
+
+
+If you don't wanna to try it out, check out this basic keybindings and put them in your `init-local-config.el`. The Emacs CUA mode is enabled by default:
 
 ```lisp
   (global-set-key (kbd "C-a") 'mark-whole-buffer)
