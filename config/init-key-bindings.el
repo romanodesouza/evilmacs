@@ -4,6 +4,9 @@
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
 (global-unset-key (kbd "C-z"))
+; Moving text
+(global-set-key (kbd "<M-S-down>") 'move-text-down)
+(global-set-key (kbd "<M-S-up>") 'move-text-up)
 ; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
 ; Find in files
@@ -23,21 +26,6 @@
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 
-
-; Open line below
-(defun open-line-below ()
-  (interactive)
-  (end-of-line)
-  (newline)
-  (indent-for-tab-command))
-
-; Open line above
-(defun open-line-above ()
-  (interactive)
-  (beginning-of-line)
-  (newline)
-  (forward-line -1)
-  (indent-for-tab-command))
 
 ; Scroll down 1 line
 (defun gcm-scroll-down ()

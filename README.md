@@ -26,6 +26,8 @@ The specific requirements are listed below. From here you need to install Emacs 
 | `Ctrl+Shift+h`            | Shifts window to the left                                                   | n             | y             | n             |
 | `Meta+l`                  | Jumps to window in the left                                                 | n             | y             | n             |
 | `Meta+h`                  | Jumps to window in the right                                                | n             | y             | n             |
+| `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
+| `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
 | `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
 | `,+a`                     | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | `,+s`                     | **s** ave and goes to normal mode                                           | y             | y             | y             |
