@@ -96,7 +96,7 @@ by creating a file `local-config/init-local-config.el`. Something like that:
 ```
 
 ## Ergonomics
-In a near future, if you got fascinated with the power of Emacs, curious and feeling confidence to try out Emacs's default keybindings, I have to advice you to be careful with RSI!!
+In a near future, if you get fascinated with the power of Emacs, curious and feeling confidence to try out Emacs's default keybindings, I have to advice you to be careful with RSI!!
 There is a **great** project called "[Ergoemacs](http://ergoemacs.org/)" that isn't just a remap of keybindings for Windows users, but a wonderful work to try to protect you against the painful Emacs's keybindings. In its wiki there is a list showing many people that got a RSI using Emacs in a QWERTY keyboard layout.
 
 
