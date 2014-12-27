@@ -21,8 +21,6 @@
 (define-key evil-normal-state-map (kbd "M-l") 'evil-window-right)
 (define-key evil-normal-state-map (kbd "C-S-l") 'evil-window-move-far-right)
 (define-key evil-normal-state-map (kbd "C-S-h") 'evil-window-move-far-left)
-(define-key evil-normal-state-map (kbd "C-l") 'forward-word)
-(define-key evil-normal-state-map (kbd "C-h") 'backward-word)
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 

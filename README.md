@@ -20,8 +20,6 @@ The specific requirements are listed below. From here you need to install Emacs 
 | `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
 | `Ctrl+k`                  | Scrolls one screen line up                                                  | n             | y             | n             |
 | `Ctrl+j`                  | Scrolls one screen line down                                                | n             | y             | n             |
-| `Ctrl+l`                  | Forwards one word                                                           | n             | y             | n             |
-| `Ctrl+h`                  | Backwards one word                                                          | n             | y             | n             |
 | `Ctrl+Shift+l`            | Shifts window to the right                                                  | n             | y             | n             |
 | `Ctrl+Shift+h`            | Shifts window to the left                                                   | n             | y             | n             |
 | `Meta+l`                  | Jumps to window in the left                                                 | n             | y             | n             |
