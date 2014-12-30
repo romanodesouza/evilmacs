@@ -16,6 +16,11 @@
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
 (electric-indent-mode t)
+; Electric pair mode
+(if (fboundp 'electric-pair-mode) (electric-pair-mode))
+; Open buffers always on bottom
+(setq split-height-threshold nil)
+(setq split-width-threshold most-positive-fixnum)
 ; Don't show me the startup screen
 (setq inhibit-startup-screen t)
 ; Show column number in mode line

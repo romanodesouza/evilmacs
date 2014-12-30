@@ -22,8 +22,10 @@ The specific requirements are listed below. From here you need to install Emacs 
 | `Ctrl+j`                  | Scrolls one screen line down                                                | n             | y             | n             |
 | `Ctrl+Shift+l`            | Shifts window to the right                                                  | n             | y             | n             |
 | `Ctrl+Shift+h`            | Shifts window to the left                                                   | n             | y             | n             |
-| `Meta+l`                  | Jumps to window in the left                                                 | n             | y             | n             |
-| `Meta+h`                  | Jumps to window in the right                                                | n             | y             | n             |
+| `Meta+l`                  | Jumps to window on the left                                                 | n             | y             | n             |
+| `Meta+h`                  | Jumps to window on the right                                                | n             | y             | n             |
+| `Meta+j`                  | Jumps to window on the bottom                                               | n             | y             | n             |
+| `Meta+k`                  | Jumps to window on the top                                                  | n             | y             | n             |
 | `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
 | `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
 | `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |

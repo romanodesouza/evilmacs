@@ -9,6 +9,8 @@
 (global-set-key (kbd "<M-S-up>") 'move-text-up)
 ; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
+; Find files
+(global-set-key (kbd "C-x C-f") 'file-fuzzy-finder)
 ; Find in files
 (global-set-key (kbd "C-S-p") 'ag-project-regexp)
 
@@ -17,10 +19,15 @@
 (define-key evil-insert-state-map (kbd "C-p") 'file-fuzzy-finder)
 (define-key evil-normal-state-map (kbd "C-j") 'gcm-scroll-down)
 (define-key evil-normal-state-map (kbd "C-k") 'gcm-scroll-up)
+
 (define-key evil-normal-state-map (kbd "M-h") 'evil-window-left)
 (define-key evil-normal-state-map (kbd "M-l") 'evil-window-right)
+(define-key evil-normal-state-map (kbd "M-j") 'evil-window-down)
+(define-key evil-normal-state-map (kbd "M-k") 'evil-window-up)
+
 (define-key evil-normal-state-map (kbd "C-S-l") 'evil-window-move-far-right)
 (define-key evil-normal-state-map (kbd "C-S-h") 'evil-window-move-far-left)
+
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
 
