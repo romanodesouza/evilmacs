@@ -2,6 +2,7 @@
 (require-package 'evil-nerd-commenter)
 (require-package 'evil-jumper)
 (require-package 'evil-visualstar)
+(require-package 'evil-matchit)
 
 ; Config
 (setq evil-search-module 'evil-search)
@@ -12,5 +13,6 @@
 
 (global-evil-jumper-mode t)
 (global-evil-visualstar-mode t)
+(global-evil-matchit-mode t)
 
 (provide 'init-evil-mode)
