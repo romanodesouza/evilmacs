@@ -1,5 +1,3 @@
-; Enable CUA mode for better ergonomics
-(cua-mode t)
 ; Disable the Ctrl+Z to void put Emacs on background job
 ; Notice that the evil-mode might override this setting to
 ; switch between evil/emacs mode
@@ -17,30 +15,16 @@
 ; Evil key bindings
 (define-key evil-normal-state-map (kbd "C-p") 'file-fuzzy-finder)
 (define-key evil-insert-state-map (kbd "C-p") 'file-fuzzy-finder)
-(define-key evil-normal-state-map (kbd "C-j") 'gcm-scroll-down)
-(define-key evil-normal-state-map (kbd "C-k") 'gcm-scroll-up)
-
-(define-key evil-normal-state-map (kbd "M-h") 'evil-window-left)
-(define-key evil-normal-state-map (kbd "M-l") 'evil-window-right)
-(define-key evil-normal-state-map (kbd "M-j") 'evil-window-down)
-(define-key evil-normal-state-map (kbd "M-k") 'evil-window-up)
-
-(define-key evil-normal-state-map (kbd "C-S-l") 'evil-window-move-far-right)
-(define-key evil-normal-state-map (kbd "C-S-h") 'evil-window-move-far-left)
-
 (define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
 (define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
+(define-key evil-normal-state-map [escape] 'keyboard-quit)
+(define-key evil-visual-state-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
+(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
-
-; Scroll down 1 line
-(defun gcm-scroll-down ()
-  (interactive)
-  (scroll-up 1))
-
-; Scroll up 1 line
-(defun gcm-scroll-up ()
-  (interactive)
-  (scroll-down 1))
 
 (defun move-text-internal (arg)
   "Move region (transient-mark-mode active) or current line."

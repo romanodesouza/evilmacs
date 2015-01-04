@@ -18,25 +18,17 @@ The specific requirements are listed below. From here you need to install Emacs 
 | `Ctrl+Shift+p`            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
 | `Ctrl+=`                  | Expand selection                                                            | y             | y             | y             |
 | `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
-| `Ctrl+k`                  | Scrolls one screen line up                                                  | n             | y             | n             |
-| `Ctrl+j`                  | Scrolls one screen line down                                                | n             | y             | n             |
-| `Ctrl+Shift+l`            | Shifts window to the right                                                  | n             | y             | n             |
-| `Ctrl+Shift+h`            | Shifts window to the left                                                   | n             | y             | n             |
-| `Meta+l`                  | Jumps to window on the left                                                 | n             | y             | n             |
-| `Meta+h`                  | Jumps to window on the right                                                | n             | y             | n             |
-| `Meta+j`                  | Jumps to window on the bottom                                               | n             | y             | n             |
-| `Meta+k`                  | Jumps to window on the top                                                  | n             | y             | n             |
 | `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
 | `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
-| `,+q`                     | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
-| `,+a`                     | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
-| `,+s`                     | **s** ave and goes to normal mode                                           | y             | y             | y             |
-| `,+d`                     | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
-| `,+g`                     | To **g** gle with last opened buffer                                        | y             | y             | y             |
-| `,+h`                     | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
-| `,+c`                     | Ace jump **c** har mode                                                     | y             | y             | y             |
-| `,+b`                     | Switch to **b** uffer                                                       | y             | y             | y             |
-| `,+v`                     | **v** ertical split                                                         | y             | y             | y             |
+| `,q`                      | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
+| `,a`                      | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
+| `,s`                      | **s** ave and goes to normal mode                                           | y             | y             | y             |
+| `,d`                      | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
+| `,g`                      | To **g** gle with last opened buffer                                        | y             | y             | y             |
+| `,h`                      | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
+| `,c`                      | Ace jump **c** har mode                                                     | y             | y             | y             |
+| `,b`                      | Switch to **b** uffer                                                       | y             | y             | y             |
+| `,v`                      | **v** ertical split                                                         | y             | y             | y             |
 | `<tab>`                   | Expand snippet or print a tab stop                                          | y             | y             | y             |
 
 where `Meta` could be `Alt` or `Command` depending on OS or personal config.
@@ -102,9 +94,11 @@ In a near future, if you get fascinated with the power of Emacs, curious and fee
 There is a **great** project called "[Ergoemacs](http://ergoemacs.org/)" that isn't just a remap of keybindings for Windows users, but a wonderful work to try to protect you against the painful Emacs's keybindings. In its wiki there is a list showing many people that got a RSI using Emacs in a QWERTY keyboard layout.
 
 
-If you don't wanna to try it out, check out this basic keybindings and put them in your `init-local-config.el`. The Emacs CUA mode is enabled by default:
+If you don't wanna to try it out, check out this basic keybindings and put them in your `init-local-config.el`.
 
 ```lisp
+  (cua-mode t)
+
   (global-set-key (kbd "C-a") 'mark-whole-buffer)
   (global-set-key (kbd "C-s") 'save-buffer)
   (global-set-key (kbd "C-f") 'helm-swoop)
