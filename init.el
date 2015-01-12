@@ -18,6 +18,8 @@
 (electric-indent-mode t)
 ; Electric pair mode
 (if (fboundp 'electric-pair-mode) (electric-pair-mode))
+; Show full path of file in title bar
+(setq-default frame-title-format "%b (%f)")
 ; Open buffers always on bottom
 (setq split-height-threshold nil)
 (setq split-width-threshold most-positive-fixnum)
