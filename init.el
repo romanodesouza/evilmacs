@@ -76,6 +76,9 @@
 (require 'init-flycheck)
 (require 'init-yasnippet)
 
+(require 'init-dockerfile-mode)
+(require 'init-nginx-mode)
+
 (require 'init-go-mode)
 (require 'init-javascript-mode)
 (add-hook 'python-mode-hook (lambda () (require 'init-python-mode)))
