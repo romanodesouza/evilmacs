@@ -4,6 +4,7 @@
 (require-package 'evil-visualstar)
 (require-package 'evil-matchit)
 
+(setq evil-want-C-u-scroll t)
 ; Enable evil mode
 (evil-mode t)
 ; Enable evil-nerd-commenter
