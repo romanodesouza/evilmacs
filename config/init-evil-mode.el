@@ -4,8 +4,6 @@
 (require-package 'evil-visualstar)
 (require-package 'evil-matchit)
 
-; Config
-(setq evil-search-module 'evil-search)
 ; Enable evil mode
 (evil-mode t)
 ; Enable evil-nerd-commenter
