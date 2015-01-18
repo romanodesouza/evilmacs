@@ -18,6 +18,8 @@ The specific requirements are listed below. From here you need to install Emacs 
 | `Ctrl+Shift+p`            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
 | `Ctrl+=`                  | Expand selection                                                            | y             | y             | y             |
 | `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
+| `Ctrl+]`                  | Jump to definition                                                          | n             | y             | y             |
+| `K`                       | Show doc                                                                    | n             | y             | y             |
 | `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
 | `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
 | `,q`                      | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
