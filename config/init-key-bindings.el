@@ -12,22 +12,6 @@
 ; Find in files
 (global-set-key (kbd "C-S-p") 'ag-project-regexp)
 
-; Evil key bindings
-(define-key evil-normal-state-map (kbd "C-p") 'file-fuzzy-finder)
-(define-key evil-insert-state-map (kbd "C-p") 'file-fuzzy-finder)
-(define-key evil-insert-state-map (kbd "<tab>") 'my-company-tab)
-(define-key evil-insert-state-map (kbd "<backtab>") 'evil-shift-left-line)
-(define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char)
-(define-key evil-insert-state-map (kbd "C-i") 'tab-to-tab-stop)
-(define-key evil-normal-state-map [escape] 'keyboard-quit)
-(define-key evil-visual-state-map [escape] 'keyboard-quit)
-(define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-ns-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
-(define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
-
-
 (defun move-text-internal (arg)
   "Move region (transient-mark-mode active) or current line."
   (let ((remember-point (point)))

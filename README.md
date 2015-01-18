@@ -45,12 +45,6 @@ go get github.com/bradfitz/goimports
 go get github.com/golang/lint
 go get code.google.com/p/rog-go/exp/cmd/godef
 ```
-Key bindings in Go mode:
-
-| Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
-| `Ctrl+c Ctrl+j`           | Jumps to definition                                                         | y             | y             | y             |
-| `Ctrl+c Ctrl+d`           | Describes symbol on modeline                                                | y             | y             | y             |
 
 ### Javascript
 It uses tern and support js-beautify after saving the file.
@@ -59,11 +53,7 @@ Install:
 npm install tern
 npm install js-beautify 
 ```
-Key bindings in Javascript mode:
 
-| Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
-| `Meta+.`                  | Jumps to definition                                                         | y             | y             | y             |
 
 ### Python
 It is bound to [pyenv](https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer).
@@ -71,12 +61,10 @@ Once you have it OK, you can install:
 ```
 pip install jedi
 ```
-Key bindings in Python mode:
 
-| Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
-| `Ctrl+c ?`                | Shows doc                                                                   | y             | y             | y             |
-| `Ctrl+c .`                | Jumps to definition                                                         | y             | y             | y             |
+
+## Other modes
+There are a basic, but very good support to `php`, `html`, `css` and `scss` modes.
 
 ## Customizing
 You can change the color theme, font face, add or change some key bindings without touching the general config
