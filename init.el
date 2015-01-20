@@ -71,6 +71,7 @@
 (require 'init-smex)
 (require 'init-ido)
 (require 'init-helm)
+(require 'init-smart-mode-line)
 
 (require 'init-company-mode)
 (require 'init-flycheck)

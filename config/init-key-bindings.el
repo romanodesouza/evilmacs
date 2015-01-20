@@ -54,5 +54,4 @@
   (interactive "*p")
   (move-text-internal arg))
 
-
 (provide 'init-key-bindings)
