@@ -14,26 +14,26 @@ The specific requirements are listed below. From here you need to install Emacs 
 ## Custom key bindings
 | Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
-| `Ctrl+p`                  | Find files                                                                  | y             | y             | y             |
-| `Ctrl+Shift+p`            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
-| `Ctrl+=`                  | Expand selection                                                            | y             | y             | y             |
-| `Ctrl+Shift+=`            | Contract selection                                                          | y             | y             | y             |
-| `Ctrl+]`                  | Jump to definition                                                          | n             | y             | y             |
-| `K`                       | Show doc                                                                    | n             | y             | y             |
-| `Meta+Shift+up`           | Moves line or selection up                                                  | y             | y             | y             |
-| `Meta+Shift+down`         | Moves line or selection down                                                | y             | y             | y             |
-| `,q`                      | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
-| `,a`                      | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
-| `,s`                      | **s** ave and goes to normal mode                                           | y             | y             | y             |
-| `,d`                      | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
-| `,g`                      | To **g** gle with last opened buffer                                        | y             | y             | y             |
-| `,h`                      | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
-| `,c`                      | Ace jump **c** har mode                                                     | y             | y             | y             |
-| `,b`                      | Switch to **b** uffer                                                       | y             | y             | y             |
-| `,v`                      | **v** ertical split                                                         | y             | y             | y             |
-| `<tab>`                   | Expand snippet or print a tab stop                                          | y             | y             | y             |
+| <kbd>C-p</kbd>            | Find files                                                                  | y             | y             | y             |
+| <kbd>C-S-p</kbd>          | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
+| <kbd>C-=</kbd>            | Expand selection                                                            | y             | y             | y             |
+| <kbd>C-S-=</kbd>          | Contract selection                                                          | y             | y             | y             |
+| <kbd>C-]</kbd>            | Jump to definition                                                          | n             | y             | y             |
+| <kbd>K</kbd>              | Show doc                                                                    | n             | y             | y             |
+| <kbd>M-S-up</kbd>         | Moves line or selection up                                                  | y             | y             | y             |
+| <kbd>M-S-down</kbd>       | Moves line or selection down                                                | y             | y             | y             |
+| <kbd>,</kbd><kbd>q</kbd>  | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
+| <kbd>,</kbd><kbd>a</kbd>  | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
+| <kbd>,</kbd><kbd>s</kbd>  | **s** ave and goes to normal mode                                           | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>  | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
+| <kbd>,</kbd><kbd>g</kbd>  | To **g** gle with last opened buffer                                        | y             | y             | y             |
+| <kbd>,</kbd><kbd>h</kbd>  | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
+| <kbd>,</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                                     | y             | y             | y             |
+| <kbd>,</kbd><kbd>b</kbd>  | Switch to **b** uffer                                                       | y             | y             | y             |
+| <kbd>,</kbd><kbd>v</kbd>  | **v** ertical split                                                         | y             | y             | y             |
+| <kbd><tab></kbd>          | Expand snippet or print a tab stop                                          | y             | y             | y             |
 
-where `Meta` could be `Alt` or `Command` depending on OS or personal config.
+where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
 ## Programming modes
 All of these modes have at minimum a smart code completion integration. Check it out:
