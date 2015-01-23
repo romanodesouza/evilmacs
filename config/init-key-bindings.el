@@ -11,6 +11,19 @@
 (global-set-key (kbd "C-x C-f") 'file-fuzzy-finder)
 ; Find in files
 (global-set-key (kbd "C-S-p") 'ag-project-regexp)
+; Smart beginning of line
+(global-set-key [home] 'smart-beginning-of-line)
+
+(defun smart-beginning-of-line ()
+  "Move point to first non-whitespace character or beginning-of-line.
+
+  Move point to the first non-whitespace character on this line.
+  If point was already at that position, move point to beginning of line."
+  (interactive) ; Use (interactive "^") in Emacs 23 to make shift-select work
+  (let ((oldpos (point)))
+    (back-to-indentation)
+    (and (= oldpos (point))
+         (beginning-of-line))))
 
 (defun move-text-internal (arg)
   "Move region (transient-mark-mode active) or current line."
