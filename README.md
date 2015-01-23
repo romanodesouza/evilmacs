@@ -23,6 +23,7 @@ The specific requirements are listed below. From here you need to install Emacs 
 | <kbd>M-S-up</kbd>         | Moves line or selection up                                                  | y             | y             | y             |
 | <kbd>M-S-down</kbd>       | Moves line or selection down                                                | y             | y             | y             |
 | <kbd>,</kbd><kbd>q</kbd>  | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
+| <kbd>,</kbd><kbd>e</kbd>  | Goes to **e** nd of line                                                    | y             | y             | y             |
 | <kbd>,</kbd><kbd>a</kbd>  | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | <kbd>,</kbd><kbd>s</kbd>  | **s** ave and goes to normal mode                                           | y             | y             | y             |
 | <kbd>,</kbd><kbd>d</kbd>  | Goes to symbol **d** efinition in current buffer                                   | y             | y             | y             |
