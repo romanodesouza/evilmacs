@@ -25,7 +25,7 @@ The specific requirements are listed below. From here you need to install Emacs 
 | <kbd>,</kbd><kbd>q</kbd>  | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
 | <kbd>,</kbd><kbd>a</kbd>  | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
 | <kbd>,</kbd><kbd>s</kbd>  | **s** ave and goes to normal mode                                           | y             | y             | y             |
-| <kbd>,</kbd><kbd>d</kbd>  | Goes to **d** efinition in current buffer                                   | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>  | Goes to symbol **d** efinition in current buffer                                   | y             | y             | y             |
 | <kbd>,</kbd><kbd>g</kbd>  | To **g** gle with last opened buffer                                        | y             | y             | y             |
 | <kbd>,</kbd><kbd>h</kbd>  | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
 | <kbd>,</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                                     | y             | y             | y             |
