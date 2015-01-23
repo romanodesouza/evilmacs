@@ -31,7 +31,7 @@ The specific requirements are listed below. From here you need to install Emacs 
 | <kbd>,</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                                     | y             | y             | y             |
 | <kbd>,</kbd><kbd>b</kbd>  | Switch to **b** uffer                                                       | y             | y             | y             |
 | <kbd>,</kbd><kbd>v</kbd>  | **v** ertical split                                                         | y             | y             | y             |
-| <kbd><tab></kbd>          | Expand snippet or print a tab stop                                          | y             | y             | y             |
+| <kbd>tab</kbd>          | Expand snippet or print a tab stop                                          | y             | y             | y             |
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
