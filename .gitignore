@@ -2,5 +2,6 @@ elpa/
 projectile-bookmarks.eld
 auto-save-list/
 eshell/
-local-config/*.el
+local-config/*
+!local-config/README.md
 .mc-lists.el
