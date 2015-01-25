@@ -55,14 +55,26 @@ where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt<
 ## Programming modes
 
 ### Go
-First of all, you need to know that Emacs should be aware about the `$GOPATH` env variable. The easy way is just open it from shell.
+First of all, you need to know that Emacs should be aware about the `$GOPATH` env variable. The easy way is just open it from the shell.
 Now install:
 ```
-go get github.com/nsf/gocode
-go get github.com/bradfitz/goimports
+go get golang.org/x/tools/cmd/goimports
+go get golang.org/x/tools/cmd/oracle
+go get golang.org/x/tools/cmd/gorename
+go get golang.org/x/tools/refactor/rename
 go get github.com/golang/lint
+go get github.com/nsf/gocode
 go get code.google.com/p/rog-go/exp/cmd/godef
 ```
+
+Custom key bindings:
+
+| Key binding                                         | Action                | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                                         | -----------           | ---------     | -----------   | ------------  |
+| <kbd>SPC</kbd><kbd>g</kbd><kbd>r                    | Go rename             | n             | y             | n             |
+| <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>i</kbd>  | Go oracle implements  | n             | y             | n             |
+| <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>c</kbd>  | Go oracle callers     | n             | y             | n             |
+| <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>s</kbd>  | Go oracle callstack   | n             | y             | n             |
 
 ### Javascript
 It uses tern and support js-beautify after saving the file.

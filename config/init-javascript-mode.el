@@ -10,8 +10,7 @@
   (tern-mode t)
   (js2-imenu-extras-mode)
   (add-hook 'before-save-hook 'web-beautify-js-buffer t t)
-  (set (make-local-variable 'company-backends)
-       '((company-tern company-yasnippet)))
+  (set (make-local-variable 'company-backends) '((company-tern company-yasnippet)))
 
   (setq-default js2-global-externs
                 '("module" "require" "__dirname" "process" "console" "define"
