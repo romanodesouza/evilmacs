@@ -1,7 +1,6 @@
 (require-package 'projectile)
 
 (projectile-global-mode)
-(setq projectile-enable-caching nil)
 
 (defun file-fuzzy-finder ()
   "Open files with projectile-find-file or projectile-find-file-in-directory"
