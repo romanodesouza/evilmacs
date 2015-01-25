@@ -17,32 +17,42 @@ Just clone it in your $HOME directory:
 `git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d`
 
 ## Custom key bindings
-| Key binding               | Action                                                                      | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------               | -----------                                                                 | ---------     | -----------   | ------------  |
-| <kbd>C-p</kbd>            | Find files                                                                  | y             | y             | y             |
-| <kbd>C-S-p</kbd>          | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))                 | y             | y             | y             |
-| <kbd>C-=</kbd>            | Expand selection                                                            | y             | y             | y             |
-| <kbd>C-S-=</kbd>          | Contract selection                                                          | y             | y             | y             |
-| <kbd>C-]</kbd>            | Jump to definition                                                          | n             | y             | y             |
-| <kbd>K</kbd>              | Show doc                                                                    | n             | y             | y             |
-| <kbd>M-S-up</kbd>         | Moves line or selection up                                                  | y             | y             | y             |
-| <kbd>M-S-down</kbd>       | Moves line or selection down                                                | y             | y             | y             |
-| <kbd>,</kbd><kbd>q</kbd>  | **q** uit window(actually deletes the current window)                       | y             | y             | y             |
-| <kbd>,</kbd><kbd>e</kbd>  | Goes to **e** nd of line                                                    | y             | y             | y             |
-| <kbd>,</kbd><kbd>a</kbd>  | Find **a** ny occurrence in current buffer                                  | y             | y             | y             |
-| <kbd>,</kbd><kbd>s</kbd>  | **s** ave and goes to normal mode                                           | y             | y             | y             |
-| <kbd>,</kbd><kbd>d</kbd>  | Goes to symbol **d** efinition in current buffer                            | y             | y             | y             |
-| <kbd>,</kbd><kbd>g</kbd>  | To **g** gle with last opened buffer                                        | y             | y             | y             |
-| <kbd>,</kbd><kbd>h</kbd>  | Clear previous **h** ighlighted search in current buffer                    | y             | y             | y             |
-| <kbd>,</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                                     | y             | y             | y             |
-| <kbd>,</kbd><kbd>b</kbd>  | Switch to **b** uffer                                                       | y             | y             | y             |
-| <kbd>,</kbd><kbd>v</kbd>  | **v** ertical split                                                         | y             | y             | y             |
-| <kbd>tab</kbd>            | Expand snippet or print a tab stop                                          | y             | y             | y             |
+| Key binding                 | Action                                                       | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                 | -----------                                                  | ---------     | -----------   | ------------  |
+| <kbd>C-p</kbd>              | Find files                                                   | y             | y             | y             |
+| <kbd>C-S-p</kbd>            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))  | y             | y             | y             |
+| <kbd>C-=</kbd>              | Expand selection                                             | y             | y             | y             |
+| <kbd>C--</kbd>              | Contract selection                                           | y             | y             | y             |
+| <kbd>C-]</kbd>              | Jump to definition                                           | n             | y             | y             |
+| <kbd>K</kbd>                | Show doc                                                     | n             | y             | y             |
+| <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                           | y             | y             | y             |
+| <kbd>,</kbd><kbd>q</kbd>    | **q** uit window(actually deletes the current window)        | y             | y             | y             |
+| <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                     | y             | y             | y             |
+| <kbd>,</kbd><kbd>a</kbd>    | Find **a** ny occurrence in current buffer(helm-swoop)       | y             | y             | y             |
+| <kbd>,</kbd><kbd>s</kbd>    | **s** ave and goes to normal mode                            | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer             | y             | y             | y             |
+| <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                         | y             | y             | y             |
+| <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer     | y             | y             | y             |
+| <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                        | y             | y             | y             |
+| <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                          | y             | y             | y             |
+| <kbd>tab</kbd>              | Expand snippet or print a tab stop                           | y             | y             | y             |
+| <kbd>f5</kbd>               | Revert buffer                                                | y             | y             | y             |
+| <kbd>SPC</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                      | n             | y             | y             |
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
+### evil-nerd-commenter key bindings
+| Key binding                           | Action                                             | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                           | -----------                                        | ---------     | -----------   | ------------  |
+| <kbd>,</kbd><kbd>,</kbd><kbd>,</kbd>  | 'evilnc-comment-or-uncomment-lines                 | n             | n             | y             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>i</kbd>  | 'evilnc-comment-or-uncomment-lines                 | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>l</kbd>  | 'evilnc-comment-or-uncomment-to-the-line           | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>c</kbd>  | 'evilnc-copy-and-comment-lines                     | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>p</kbd>  | 'evilnc-comment-or-uncomment-paragraphs            | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>r</kbd>  | 'evilnc-comment-or-uncomment-region                | n             | y             | n             |
+
+
 ## Programming modes
-All of these modes have at minimum a smart code completion integration. Check it out:
 
 ### Go
 First of all, you need to know that Emacs should be aware about the `$GOPATH` env variable. The easy way is just open it from shell.
@@ -70,9 +80,25 @@ Once you have it OK, you can install:
 pip install jedi
 ```
 
+### HTML
+Custom key bindings:
+
+| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
+| <kbd>SPC</kbd><kbd>t</kbd><kbd>d</kbd>  | Delete open and close tag, and then reindent buffer  | n             | y             | y             |
+| <kbd>SPC</kbd><kbd>t</kbd><kbd>f</kbd>  | Skip tag forward                                     | n             | y             | y             |
+| <kbd>SPC</kbd><kbd>t</kbd><kbd>b</kbd>  | Skip tag backward                                    | n             | y             | y             |
+| <kbd>SPC</kbd><kbd>t</kbd><kbd>c</kbd>  | Close tag                                            | n             | y             | y             |
+
+#### Jinja2 mode
+| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
+| <kbd>SPC</kbd><kbd>j</kbd><kbd>o</kbd>  | Insert jinja2 tag(`{% %}`)                           | n             | y             | y             |
+| <kbd>SPC</kbd><kbd>j</kbd><kbd>c</kbd>  | Close jinja2 tag(Ex.: `{% endblock %}`)              | n             | y             | y             |
+
 
 ## Other modes
-There are a basic, but very good support to `nginx`, `Dockerfile`, `php`, `html`, `yaml`, `css` and `scss` modes.
+There are a basic, but very good support to `nginx`, `Dockerfile`, `php`, `yaml`, `css` and `scss` modes.
 
 ## Customizing
 You can change the color theme, font face, add or change some key bindings without touching the general config

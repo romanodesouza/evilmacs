@@ -63,7 +63,6 @@
 (require 'init-linum-relative)
 (require 'init-projectile)
 (require 'init-expand-region)
-(require 'init-multiple-cursors)
 (require 'init-ag)
 
 (require 'init-smooth-scrolling)

@@ -1,13 +1,13 @@
 (require-package 'key-chord)
 
 (key-chord-define-global ",q" 'delete-window)
+(key-chord-define-global ",w" 'delete-other-windows)
 (key-chord-define-global ",e" 'end-of-line)
 (key-chord-define-global ",a" 'helm-swoop)
 (key-chord-define-global ",s" 'save-buffer-and-goes-to-normal-mode)
 (key-chord-define-global ",d" 'helm-semantic-or-imenu)
 (key-chord-define-global ",g" 'switch-to-previous-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
-(key-chord-define-global ",c" 'evil-ace-jump-char-mode)
 (key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",v" 'evil-window-vsplit)
 
