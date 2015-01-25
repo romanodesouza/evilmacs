@@ -37,7 +37,6 @@ Just clone it in your $HOME directory:
 | <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                          | y             | y             | y             |
 | <kbd>tab</kbd>              | Expand snippet or print a tab stop                           | y             | y             | y             |
 | <kbd>f5</kbd>               | Revert buffer                                                | y             | y             | y             |
-| <kbd>SPC</kbd><kbd>c</kbd>  | Ace jump **c** har mode                                      | n             | y             | y             |
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 

@@ -16,9 +16,6 @@
 (global-evil-visualstar-mode t)
 (global-evil-matchit-mode t)
 
-; Evil ace jump char mode
-(evil-define-key 'motion global-map (kbd "<SPC> c") 'evil-ace-jump-char-mode)
-
 (define-key evil-motion-state-map (kbd "C-]") nil)
 (define-key evil-motion-state-map (kbd "K") nil)
 (define-key evil-normal-state-map (kbd "C-p") 'file-fuzzy-finder)

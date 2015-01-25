@@ -59,7 +59,6 @@
 (require 'init-elpa)
 
 (require 'init-evil-mode)
-(require 'init-ace-jump-mode)
 (require 'init-linum-relative)
 (require 'init-projectile)
 (require 'init-expand-region)
