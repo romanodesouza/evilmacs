@@ -83,14 +83,6 @@ npm install tern
 npm install js-beautify 
 ```
 
-
-### Python
-It is bound to [pyenv](https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer).
-Once you have it OK, you can install:
-```
-pip install jedi
-```
-
 ### HTML
 Custom key bindings:
 

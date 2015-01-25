@@ -80,7 +80,6 @@
 
 (require 'init-go-mode)
 (require 'init-javascript-mode)
-(add-hook 'python-mode-hook (lambda () (require 'init-python-mode)))
 (require 'init-web-mode)
 (require 'init-yaml-mode)
 
