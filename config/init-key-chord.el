@@ -2,7 +2,7 @@
 
 (key-chord-define-global ",w" 'delete-other-windows)
 (key-chord-define-global ",e" 'end-of-line)
-(key-chord-define-global ",a" 'ag-regexp)
+(key-chord-define-global ",a" 'ag-project-regexp)
 (key-chord-define-global ",s" 'save-buffer-and-goes-to-normal-mode)
 (key-chord-define-global ",d" 'helm-semantic-or-imenu)
 (key-chord-define-global ",g" 'switch-to-previous-buffer)
