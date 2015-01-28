@@ -17,26 +17,25 @@ Just clone it in your $HOME directory:
 `git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d`
 
 ## Custom key bindings
-| Key binding                 | Action                                                       | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                 | -----------                                                  | ---------     | -----------   | ------------  |
-| <kbd>C-p</kbd>              | Find files                                                   | y             | y             | y             |
-| <kbd>C-S-p</kbd>            | Find **in** files(requires [ag](http://geoff.greer.fm/ag/))  | y             | y             | y             |
-| <kbd>C-=</kbd>              | Expand selection                                             | y             | y             | y             |
-| <kbd>C--</kbd>              | Contract selection                                           | y             | y             | y             |
-| <kbd>C-]</kbd>              | Jump to definition                                           | n             | y             | y             |
-| <kbd>K</kbd>                | Show doc                                                     | n             | y             | y             |
-| <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                           | y             | y             | y             |
-| <kbd>,</kbd><kbd>q</kbd>    | **q** uit window(actually deletes the current window)        | y             | y             | y             |
-| <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                     | y             | y             | y             |
-| <kbd>,</kbd><kbd>a</kbd>    | Find **a** ny occurrence in current buffer(helm-swoop)       | y             | y             | y             |
-| <kbd>,</kbd><kbd>s</kbd>    | **s** ave and goes to normal mode                            | y             | y             | y             |
-| <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer             | y             | y             | y             |
-| <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                         | y             | y             | y             |
-| <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer     | y             | y             | y             |
-| <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                        | y             | y             | y             |
-| <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                          | y             | y             | y             |
-| <kbd>tab</kbd>              | Expand snippet or print a tab stop                           | y             | y             | y             |
-| <kbd>f5</kbd>               | Revert buffer                                                | y             | y             | y             |
+| Key binding                 | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                 | -----------                                                        | ---------     | -----------   | ------------  |
+| <kbd>C-p</kbd>              | Find files                                                         | y             | y             | y             |
+| <kbd>C-=</kbd>              | Expand selection                                                   | y             | y             | y             |
+| <kbd>C--</kbd>              | Contract selection                                                 | y             | y             | y             |
+| <kbd>C-]</kbd>              | Jump to definition                                                 | n             | y             | y             |
+| <kbd>K</kbd>                | Show doc                                                           | n             | y             | y             |
+| <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                                 | y             | y             | y             |
+| <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                           | y             | y             | y             |
+| <kbd>,</kbd><kbd>a</kbd>    | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
+| <kbd>,</kbd><kbd>s</kbd>    | **s** ave and goes to normal mode                                  | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
+| <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                               | y             | y             | y             |
+| <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
+| <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                              | y             | y             | y             |
+| <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                                | y             | y             | y             |
+| <kbd>M-/</kbd>              | Alternative search using helm-swoop                                | y             | y             | y             |
+| <kbd>tab</kbd>              | Expand snippet or print a tab stop                                 | y             | y             | y             |
+| <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 

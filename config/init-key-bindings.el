@@ -4,17 +4,17 @@
 (global-unset-key (kbd "C-z"))
 ; Enter for new line and indent
 (global-set-key (kbd "RET") 'newline-and-indent)
-; Find files
-(global-set-key (kbd "C-x C-f") 'file-fuzzy-finder)
-; Find in files
-(global-set-key (kbd "C-S-p") 'ag-project-regexp)
+; Alternative search using helm-swoop
+(global-set-key (kbd "M-/") 'helm-swoop)
 ; Revert buffer
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
+; Smart beginning of line
+(global-set-key [home] 'smart-beginning-of-line)
+
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
   (interactive) (revert-buffer t t))
-; Smart beginning of line
-(global-set-key [home] 'smart-beginning-of-line)
+
 (defun smart-beginning-of-line ()
   "Move point to first non-whitespace character or beginning-of-line.
 
