@@ -50,8 +50,10 @@
 (setq show-paren-delay 0)
 ; Line spacing
 (setq-default line-spacing 3)
+; Starts in text-mode
+(setq initial-major-mode 'text-mode)
 ; Inital message in *scratch* buffer
-(setq-default initial-scratch-message "; Emacs + evil rocks!! ;D")
+(setq initial-scratch-message "")
 
 ;;
 ;; Packages
