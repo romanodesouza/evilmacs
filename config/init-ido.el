@@ -9,5 +9,6 @@
 (flx-ido-mode t)
 
 (setq ido-enable-flex-matching t)
+(setq ido-ignore-buffers '("\\` " "^\*"))
 
 (provide 'init-ido)
