@@ -42,6 +42,8 @@ Just clone it in your $HOME directory:
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
+Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
+
 ### Key bindings from evil-nerd-commenter plugin
 | Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------                           | -----------                      | ---------     | -----------   | ------------  |
