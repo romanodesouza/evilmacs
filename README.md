@@ -3,10 +3,13 @@ Emacs settings for vim users.
 
 ## Motivation
 Vim is a great and powerful editor with awesome and clever motions for fast editing, but when you intend to use it like an ide with some plugins, it becomes slow, mainly because its lack of asynchronous I/O.
-Emacs is another great editor, fully responsive and relatively fast, but its bindings isn't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
+Emacs is another great editor, fully responsive and relatively fast, but its bindings aren't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
 
 ## How?
 Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim emulator made ever. With it we can have a sweet experience feeling like home. The plugin is developed by advanced vim users and the Emacs's extensibility makes this possible.
+
+## Screenshot
+![Screenshot](http://oi61.tinypic.com/2n0pirs.jpg "Emacs in Go mode")
 
 ## Requirements
 The specific requirements are listed below. From here you need to install Emacs >=24.
@@ -37,7 +40,9 @@ Just clone it in your $HOME directory:
 | <kbd>tab</kbd>              | Expand snippet or print a tab stop                                 | y             | y             | y             |
 | <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
 
-where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
+`C` is <kbd>Ctrl</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
+
+Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
 
 ### Key bindings from evil-nerd-commenter plugin
 | Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
