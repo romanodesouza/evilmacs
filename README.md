@@ -40,7 +40,7 @@ Just clone it in your $HOME directory:
 | <kbd>tab</kbd>              | Expand snippet or print a tab stop                                 | y             | y             | y             |
 | <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
 
-where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
+`C` is <kbd>Ctrl</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
 
