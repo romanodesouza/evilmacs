@@ -42,7 +42,7 @@ where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt<
 ### Key bindings from evil-nerd-commenter plugin
 | Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------                           | -----------                      | ---------     | -----------   | ------------  |
-| <kbd>,</kbd><kbd>,</kbd><kbd>,</kbd>  | Comment or uncomment lines       | n             | n             | y             |
+| <kbd>,</kbd><kbd>,</kbd>              | Comment or uncomment lines       | n             | n             | y             |
 | <kbd>,</kbd><kbd>c</kbd><kbd>i</kbd>  | Comment or uncomment lines       | n             | y             | n             |
 | <kbd>,</kbd><kbd>c</kbd><kbd>l</kbd>  | Comment or uncomment to the line | n             | y             | n             |
 | <kbd>,</kbd><kbd>c</kbd><kbd>c</kbd>  | Copy and comment lines           | n             | y             | n             |
