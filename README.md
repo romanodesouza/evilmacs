@@ -8,6 +8,9 @@ Emacs is another great editor, fully responsive and relatively fast, but its bin
 ## How?
 Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim emulator made ever. With it we can have a sweet experience feeling like home. The plugin is developed by advanced vim users and the Emacs's extensibility makes this possible.
 
+## Screenshot
+![Screenshot](http://oi61.tinypic.com/2n0pirs.jpg "Emacs in Go mode")
+
 ## Requirements
 The specific requirements are listed below. From here you need to install Emacs >=24.
 
