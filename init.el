@@ -92,6 +92,12 @@
 (require 'init-key-bindings)
 
 ;;
+;; Default theme
+;
+(require-package 'seti-theme)
+(load-theme 'seti t)
+
+;;
 ;; Local Config
 ;
 (require 'init-local-config nil 'noerror)
