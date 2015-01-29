@@ -39,15 +39,15 @@ Just clone it in your $HOME directory:
 
 where `C` is <kbd>Ctrl</kbd>, `S` is <kbd>Shift</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
-### evil-nerd-commenter key bindings
-| Key binding                           | Action                                             | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                           | -----------                                        | ---------     | -----------   | ------------  |
-| <kbd>,</kbd><kbd>,</kbd><kbd>,</kbd>  | 'evilnc-comment-or-uncomment-lines                 | n             | n             | y             |
-| <kbd>,</kbd><kbd>c</kbd><kbd>i</kbd>  | 'evilnc-comment-or-uncomment-lines                 | n             | y             | n             |
-| <kbd>,</kbd><kbd>c</kbd><kbd>l</kbd>  | 'evilnc-comment-or-uncomment-to-the-line           | n             | y             | n             |
-| <kbd>,</kbd><kbd>c</kbd><kbd>c</kbd>  | 'evilnc-copy-and-comment-lines                     | n             | y             | n             |
-| <kbd>,</kbd><kbd>c</kbd><kbd>p</kbd>  | 'evilnc-comment-or-uncomment-paragraphs            | n             | y             | n             |
-| <kbd>,</kbd><kbd>c</kbd><kbd>r</kbd>  | 'evilnc-comment-or-uncomment-region                | n             | y             | n             |
+### Key bindings from evil-nerd-commenter plugin
+| Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                           | -----------                      | ---------     | -----------   | ------------  |
+| <kbd>,</kbd><kbd>,</kbd><kbd>,</kbd>  | Comment or uncomment lines       | n             | n             | y             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>i</kbd>  | Comment or uncomment lines       | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>l</kbd>  | Comment or uncomment to the line | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>c</kbd>  | Copy and comment lines           | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>p</kbd>  | Comment or uncomment paragraphs  | n             | y             | n             |
+| <kbd>,</kbd><kbd>c</kbd><kbd>r</kbd>  | Comment or uncomment region      | n             | y             | n             |
 
 
 ## Programming modes
@@ -112,6 +112,8 @@ by creating a file `local-config/init-local-config.el`. Something like that:
 
 (provide 'init-local-config)
 ```
+
+For a more realistic example, check out [my personal config](https://github.com/romanoaugusto88/dotfiles/tree/master/emacs).
 
 ## License
 The MIT License (MIT)
