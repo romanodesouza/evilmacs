@@ -3,7 +3,7 @@ Emacs settings for vim users.
 
 ## Motivation
 Vim is a great and powerful editor with awesome and clever motions for fast editing, but when you intend to use it like an ide with some plugins, it becomes slow, mainly because its lack of asynchronous I/O.
-Emacs is another great editor, fully responsive and fast, but its bindings isn't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
+Emacs is another great editor, fully responsive and relatively fast, but its bindings isn't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
 
 ## How?
 Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim emulator made ever. With it we can have a sweet experience feeling like home. The plugin is developed by advanced vim users and the Emacs's extensibility makes this possible.
