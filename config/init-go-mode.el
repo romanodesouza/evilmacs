@@ -21,7 +21,16 @@
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g o c") 'go-oracle-callers)
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g o s") 'go-oracle-callstack)
 
-(evil-define-key 'normal go-mode-map (kbd "<SPC> g r") 'go-rename)
+(evil-define-key 'normal go-mode-map (kbd "<SPC> g r") 'save-buffer-and-go-rename)
+
+; Saves buffer before going to go-rename
+(defun save-buffer-and-go-rename ()
+  (interactive)
+  ; Disable gofmt before saving to avoid missing the point of thing
+  (remove-hook 'before-save-hook #'gofmt-before-save)
+  (save-buffer)
+  (add-hook 'before-save-hook #'gofmt-before-save)
+  (call-interactively 'go-rename))
 
 ; Go oracle
 (let ((file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el"))
