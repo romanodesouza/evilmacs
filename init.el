@@ -15,9 +15,6 @@
 ; Default indentation
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
-(electric-indent-mode t)
-; Electric pair mode
-(if (fboundp 'electric-pair-mode) (electric-pair-mode))
 ; Show full path of file in title bar
 (setq-default frame-title-format "%b (%f)")
 ; Open buffers always on bottom
@@ -61,6 +58,7 @@
 (require 'init-elpa)
 
 (require 'init-evil-mode)
+(require 'init-electric)
 (require 'init-linum-relative)
 (require 'init-projectile)
 (require 'init-expand-region)

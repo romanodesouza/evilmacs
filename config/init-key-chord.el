@@ -10,8 +10,13 @@
 (key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",v" 'evil-window-vsplit)
 
-; Enable key-chord mode
+; Enable key-chord mode...
 (key-chord-mode t)
+; ...but disable it in minibuffer
+(add-hook 'minibuffer-setup-hook #'disable-key-chord-mode)
+
+(defun disable-key-chord-mode ()
+  (set (make-local-variable 'input-method-function) nil))
 
 ; Switch to previous buffer
 (defun switch-to-previous-buffer ()
