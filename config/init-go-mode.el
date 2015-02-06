@@ -15,7 +15,6 @@
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g o i") 'go-oracle-implements)
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g o c") 'go-oracle-callers)
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g o s") 'go-oracle-callstack)
-
 (evil-define-key 'normal go-mode-map (kbd "<SPC> g r") 'save-buffer-and-go-rename)
 
 ; Saves buffer before going to go-rename
@@ -30,17 +29,17 @@
 (defun default-go-mode-hook ()
   (add-hook 'before-save-hook #'gofmt-before-save)
   (go-eldoc-setup)
-  (set (make-local-variable 'company-backends) '((company-go)))
+  (set (make-local-variable 'company-backends) '((company-go))))
 
-  ; Go oracle
-  (let ((file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el"))
-    (when (file-exists-p (substitute-in-file-name file))
-      (progn (load file))
-      (go-oracle-mode)))
+; Go oracle
+(let ((file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el"))
+  (when (file-exists-p (substitute-in-file-name file))
+    (progn (load file))
+    (go-oracle-mode)))
 
-  ; Go rename
-  (let ((file "$GOPATH/src/golang.org/x/tools/refactor/rename/rename.el"))
-    (when (file-exists-p (substitute-in-file-name file))
-      (progn (load file)))))
+; Go rename
+(let ((file "$GOPATH/src/golang.org/x/tools/refactor/rename/rename.el"))
+  (when (file-exists-p (substitute-in-file-name file))
+    (progn (load file))))
 
 (provide 'init-go-mode)
