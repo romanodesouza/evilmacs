@@ -3,6 +3,7 @@
 (require-package 'company-tern)
 (require-package 'web-beautify)
 
+(setq company-tern-property-marker "")
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-hook 'js2-mode-hook 'default-js2-mode-hook)
 
@@ -10,7 +11,7 @@
   (tern-mode t)
   (js2-imenu-extras-mode)
   (add-hook 'before-save-hook 'web-beautify-js-buffer t t)
-  (set (make-local-variable 'company-backends) '((company-tern company-yasnippet)))
+  (set (make-local-variable 'company-backends) '((company-tern)))
 
   (setq-default js2-global-externs
                 '("module" "require" "__dirname" "process" "console" "define"
