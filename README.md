@@ -40,7 +40,9 @@ The specific requirements are listed below. From here you need to install Emacs 
 ## Install
 Just clone it in your $HOME directory:
 
-`git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d`
+```
+git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d
+```
 
 ## Installed plugins
 These plugins will be installed automatically when you open Emacs for the first time:
