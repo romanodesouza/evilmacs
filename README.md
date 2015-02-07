@@ -1,6 +1,29 @@
 # .emacs.d
 Emacs settings for vim users.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Motivation](#motivation)
+- [How?](#how)
+- [Screenshot](#screenshot)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Installed plugins](#installed-plugins)
+- [Custom key bindings](#custom-key-bindings)
+  - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
+- [Programming modes](#programming-modes)
+  - [Go](#go)
+  - [Javascript](#javascript)
+  - [HTML](#html)
+    - [Jinja2 mode](#jinja2-mode)
+- [Other modes](#other-modes)
+- [Customizing](#customizing)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Motivation
 Vim is a great and powerful editor with awesome and clever motions for fast editing, but when you intend to use it like an ide with some plugins, it becomes slow, mainly because its lack of asynchronous I/O.
 Emacs is another great editor, fully responsive and relatively fast, but its bindings aren't fluent and ergonomic like vim. This is a try to bring the best of both worlds.
