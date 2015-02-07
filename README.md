@@ -19,6 +19,47 @@ Just clone it in your $HOME directory:
 
 `git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d`
 
+## Installed plugins
+These plugins will be installed automatically when you open Emacs for the first time:
+
+- [evil](https://gitorious.org/evil/evil)
+- [evil-nerd-commenter](https://github.com/redguardtoo/evil-nerd-commenter)
+- [evil-jumper](https://github.com/bling/evil-jumper)
+- [evil-visualstar](https://github.com/bling/evil-visualstar)
+- [evil-matchit](https://github.com/redguardtoo/evil-matchit)
+- [key-chord](http://www.emacswiki.org/emacs/key-chord.el)
+- [linum-relative](https://github.com/coldnew/linum-relative)
+- [projectile](https://github.com/bbatsov/projectile)
+- [expand-region](https://github.com/magnars/expand-region.el)
+- [ag](https://github.com/Wilfred/ag.el)
+- [smooth-scrolling](https://github.com/aspiers/smooth-scrolling)
+- [smex](https://github.com/nonsequitur/smex)
+- [ido-vertical-mode](https://github.com/gempesaw/ido-vertical-mode.el)
+- [ido-ubiquitous](https://github.com/DarwinAwardWinner/ido-ubiquitous)
+- [flx-ido](https://github.com/lewang/flx)
+- [helm](https://github.com/emacs-helm/helm)
+- [helm-swoop](https://github.com/ShingoFukuyama/helm-swoop)
+- [smart-mode-line](https://github.com/Bruce-Connor/smart-mode-line)
+- [company-mode](https://github.com/company-mode/company-mode)
+- [flycheck](https://github.com/flycheck/flycheck)
+- [yasnippet](https://github.com/capitaomorte/yasnippet)
+- [dockerfile-mode](https://github.com/spotify/dockerfile-mode)
+- [nginx-mode](https://github.com/ajc/nginx-mode)
+- [go-mode](https://github.com/dominikh/go-mode.el)
+- [go-eldoc](https://github.com/syohex/emacs-go-eldoc)
+- [go-snippets](https://github.com/toumorokoshi/go-snippets)
+- [company-go](https://github.com/nsf/gocode)
+- [js2-mode](https://github.com/mooz/js2-mode)
+- [tern](https://github.com/marijnh/tern)
+- [company-tern](https://github.com/proofit404/company-tern)
+- [web-beautify](https://github.com/yasuyk/web-beautify)
+- [scss-mode](https://github.com/antonj/scss-mode)
+- [rainbow-mode](http://elpa.gnu.org/packages/rainbow-mode.html)
+- [css-eldoc](https://github.com/zenozeng/css-eldoc)
+- [php-mode](https://github.com/ejmr/php-mode)
+- [jinja2-mode](https://github.com/paradoxxxzero/jinja2-mode)
+- [yaml-mode](https://github.com/yoshiki/yaml-mode)
+
 ## Custom key bindings
 | Key binding                 | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------                 | -----------                                                        | ---------     | -----------   | ------------  |
