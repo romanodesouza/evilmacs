@@ -4,7 +4,7 @@
 (require-package 'go-snippets)
 (require 'go-mode)
 
-(setq company-go-insert-arguments t)
+(setq company-go-insert-arguments nil)
 (setq gofmt-command "goimports")
 
 (add-hook 'go-mode-hook 'default-go-mode-hook)
