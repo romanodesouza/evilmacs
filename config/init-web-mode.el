@@ -20,17 +20,14 @@
            (indent-region (point-min) (point-max)))
 
 ; Jinja2
+(plist-put evilmi-plugins 'jinja2-mode '((evilmi-html-get-tag evilmi-html-jump)))
 (add-to-list 'auto-mode-alist '("\\.html" . jinja2-mode))
 (add-to-list 'auto-mode-alist '("\\.volt" . jinja2-mode))
 (add-hook 'sgml-mode-hook 'setup-sgml-custom-keybinds)
 
 (defun setup-sgml-custom-keybinds ()
   (interactive)
-  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> t d") 'sgml-delete-tag)
-  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> t f") 'sgml-skip-tag-forward)
-  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> t b") 'sgml-skip-tag-backward)
-  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> t c") 'sgml-close-tag)
-
+  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> d t") 'sgml-delete-tag)
   (evil-define-key 'normal jinja2-mode-map (kbd "<SPC> j o") 'jinja2-insert-tag)
   (evil-define-key 'normal jinja2-mode-map (kbd "<SPC> j c") 'my-jinja2-close-tag))
 

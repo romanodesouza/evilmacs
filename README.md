@@ -158,10 +158,8 @@ Custom key bindings:
 
 | Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------                             | -----------                                          | ---------     | -----------   | ------------  |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>d</kbd>  | Delete open and close tag, and then reindent buffer  | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>f</kbd>  | Skip tag forward                                     | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>b</kbd>  | Skip tag backward                                    | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>c</kbd>  | Close tag                                            | n             | y             | y             |
+| <kbd>d</kbd><kbd>i</kbd><kbd>%</kbd>    | Deletes tag and its content                          | n             | y             | y             |
+| <kbd>SPC</kbd><kbd>d</kbd><kbd>t</kbd>  | Delete open and close tag, and then reindent buffer  | n             | y             | y             |
 
 #### Jinja2 mode
 | Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
