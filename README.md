@@ -1,4 +1,4 @@
-# .emacs.d
+# evilmacs
 Emacs settings for vim users.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -41,7 +41,7 @@ The specific requirements are listed below. From here you need to install Emacs 
 Just clone it in your $HOME directory:
 
 ```
-git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d
+git clone --depth 1 https://github.com/romanoaugusto88/evilmacs ~/.emacs.d
 ```
 
 ## Installed plugins
