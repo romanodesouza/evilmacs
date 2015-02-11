@@ -92,6 +92,7 @@ These plugins will be installed automatically when you open Emacs for the first 
 | <kbd>C--</kbd>              | Contract selection                                                 | y             | y             | y             |
 | <kbd>C-]</kbd>              | Jump to definition                                                 | n             | y             | y             |
 | <kbd>K</kbd>                | Show doc                                                           | n             | y             | y             |
+| <kbd>,</kbd><kbd>q</kbd>    | Kill buffer and **q** uit indow                                    | y             | y             | y             |
 | <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                                 | y             | y             | y             |
 | <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                           | y             | y             | y             |
 | <kbd>,</kbd><kbd>a</kbd>    | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
