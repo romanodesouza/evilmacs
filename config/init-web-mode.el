@@ -25,9 +25,14 @@
 
 (add-hook 'css-mode-hook 'my-local-electric-pair-mode)
 
+(defun my-emmet-tab ()
+  (interactive)
+  (when (null (emmet-expand-yas))
+    (tab-to-tab-stop)))
+
 (defun my-emmet-mode ()
   (setq yas-dont-activate t)
   (emmet-mode)
-  (evil-define-key 'insert emmet-mode-keymap (kbd "<tab>") 'emmet-expand-line))
+  (evil-define-key 'insert emmet-mode-keymap (kbd "<tab>") 'my-emmet-tab))
 
 (provide 'init-web-mode)
