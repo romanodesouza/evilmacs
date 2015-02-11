@@ -33,6 +33,8 @@
 (defun my-emmet-mode ()
   (setq yas-dont-activate t)
   (emmet-mode)
-  (evil-define-key 'insert emmet-mode-keymap (kbd "<tab>") 'my-emmet-tab))
+  (evil-define-key 'insert emmet-mode-keymap (kbd "<tab>") 'my-emmet-tab)
+  (define-key emmet-mode-keymap (kbd "C-j") nil)
+  (define-key emmet-mode-keymap (kbd "<C-return>") nil))
 
 (provide 'init-web-mode)
