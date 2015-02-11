@@ -9,6 +9,7 @@
 
 (add-hook 'go-mode-hook 'default-go-mode-hook)
 
+(evil-define-key 'normal go-mode-map (kbd "gd") 'godef-jump)
 (evil-define-key 'normal go-mode-map (kbd "C-]") 'godef-jump)
 (evil-define-key 'normal go-mode-map (kbd "K") 'godef-describe)
 

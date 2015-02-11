@@ -24,6 +24,7 @@
   (setq-default js2-enter-indents-newline t) ; don't need to push tab before typing
   (setq-default js2-indent-on-enter-key t))
 
+(evil-define-key 'normal tern-mode-keymap (kbd "gd") 'tern-find-definition)
 (evil-define-key 'normal tern-mode-keymap (kbd "C-]") 'tern-find-definition)
 (evil-define-key 'normal tern-mode-keymap (kbd "K") 'tern-get-docs)
 
