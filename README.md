@@ -16,8 +16,6 @@ Emacs settings for vim users.
 - [Programming modes](#programming-modes)
   - [Go](#go)
   - [Javascript](#javascript)
-  - [HTML](#html)
-    - [Jinja2 mode](#jinja2-mode)
 - [Other modes](#other-modes)
 - [Customizing](#customizing)
 - [License](#license)
@@ -82,7 +80,8 @@ These plugins will be installed automatically when you open Emacs for the first 
 - [rainbow-mode](http://elpa.gnu.org/packages/rainbow-mode.html)
 - [css-eldoc](https://github.com/zenozeng/css-eldoc)
 - [php-mode](https://github.com/ejmr/php-mode)
-- [jinja2-mode](https://github.com/paradoxxxzero/jinja2-mode)
+- [web-mode](https://github.com/fxbois/web-mode)
+- [emmet-mode](https://github.com/smihica/emmet-mode)
 - [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 ## Custom key bindings
@@ -103,7 +102,7 @@ These plugins will be installed automatically when you open Emacs for the first 
 | <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                              | y             | y             | y             |
 | <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                                | y             | y             | y             |
 | <kbd>M-/</kbd>              | Alternative search using helm-swoop                                | y             | y             | y             |
-| <kbd>tab</kbd>              | Expand snippet or print a tab stop                                 | y             | y             | y             |
+| <kbd>tab</kbd>              | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
 | <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
 
 `C` is <kbd>Ctrl</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
@@ -153,23 +152,16 @@ npm install tern
 npm install js-beautify 
 ```
 
-### HTML
-Custom key bindings:
-
-| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
-| <kbd>d</kbd><kbd>i</kbd><kbd>%</kbd>    | Deletes tag and its content                          | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>d</kbd><kbd>t</kbd>  | Delete open and close tag, and then reindent buffer  | n             | y             | y             |
-
-#### Jinja2 mode
-| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
-| <kbd>SPC</kbd><kbd>j</kbd><kbd>o</kbd>  | Insert jinja2 tag(`{% %}`)                           | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>j</kbd><kbd>c</kbd>  | Close jinja2 tag(Ex.: `{% endblock %}`)              | n             | y             | y             |
-
-
 ## Other modes
-There are a basic, but very good support to `nginx`, `Dockerfile`, `php`, `yaml`, `css` and `scss` modes.
+There are a basic, but very good support to:
+
+- NGINX
+- Dockerfile
+- php
+- yaml
+- html
+- css
+- scss
 
 ## Customizing
 You can change the color theme, font face, add or change some key bindings without touching the general config

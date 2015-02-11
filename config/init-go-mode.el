@@ -29,7 +29,8 @@
 (defun default-go-mode-hook ()
   (add-hook 'before-save-hook #'gofmt-before-save)
   (go-eldoc-setup)
-  (set (make-local-variable 'company-backends) '((company-go))))
+  (set (make-local-variable 'company-backends) '((company-go)))
+  (my-local-electric-pair-mode))
 
 ; Go oracle
 (let ((file "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el"))

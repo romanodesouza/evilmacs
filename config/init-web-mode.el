@@ -1,45 +1,33 @@
+(require-package 'web-mode)
 (require-package 'scss-mode)
 (require-package 'rainbow-mode)
 (require-package 'css-eldoc)
 (require-package 'php-mode)
-(require-package 'jinja2-mode)
+(require-package 'emmet-mode)
 
+(setq web-mode-engines-alist '(("jinja2" . "\\.html\\'") ("jinja2" . "\\.volt\\'")))
 (setq-default scss-compile-at-save nil)
+
+(add-to-list 'auto-mode-alist '("\\.html" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.volt" . web-mode))
 
 (add-hook 'html-mode-hook 'rainbow-mode)
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'scss-mode-hook 'rainbow-mode)
+(add-hook 'web-mode-hook 'rainbow-mode)
 
 (autoload 'turn-on-css-eldoc "css-eldoc")
 (add-hook 'css-mode-hook 'turn-on-css-eldoc)
 
-; Indent after delete and/or close
-(defadvice sgml-delete-tag (after reindent activate)
-           (indent-region (point-min) (point-max)))
-(defadvice sgml-close-tag (after reindent activate)
-           (indent-region (point-min) (point-max)))
+(add-hook 'css-mode-hook 'my-emmet-mode)
+(add-hook 'sgml-mode-hook 'my-emmet-mode)
+(add-hook 'web-mode-hook 'my-emmet-mode)
 
-; Jinja2
-(plist-put evilmi-plugins 'jinja2-mode '((evilmi-html-get-tag evilmi-html-jump)))
-(add-to-list 'auto-mode-alist '("\\.html" . jinja2-mode))
-(add-to-list 'auto-mode-alist '("\\.volt" . jinja2-mode))
-(add-hook 'sgml-mode-hook 'setup-sgml-custom-keybinds)
+(add-hook 'css-mode-hook 'my-local-electric-pair-mode)
 
-(defun setup-sgml-custom-keybinds ()
-  (interactive)
-  (evil-define-key 'normal sgml-mode-map (kbd "<SPC> d t") 'sgml-delete-tag)
-  (evil-define-key 'normal jinja2-mode-map (kbd "<SPC> j o") 'jinja2-insert-tag)
-  (evil-define-key 'normal jinja2-mode-map (kbd "<SPC> j c") 'my-jinja2-close-tag))
-
-(defun my-jinja2-close-tag ()
-  "Close the previously opened template tag."
-  (interactive)
-  (let ((open-tag (save-excursion (jinja2-find-open-tag))))
-    (if open-tag
-      (insert
-        (format "{%% end%s %%}"
-                (match-string 2)))
-      (error "Nothing to close")))
-  (save-excursion (jinja2-indent-line)))
+(defun my-emmet-mode ()
+  (setq yas-dont-activate t)
+  (emmet-mode)
+  (evil-define-key 'insert emmet-mode-keymap (kbd "<tab>") 'emmet-expand-line))
 
 (provide 'init-web-mode)
