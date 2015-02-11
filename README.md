@@ -10,7 +10,7 @@ Emacs settings for vim users.
 - [Screenshot](#screenshot)
 - [Requirements](#requirements)
 - [Install](#install)
-- [Installed plugins](#installed-plugins)
+- [Plugins](#installed-plugins)
 - [Custom key bindings](#custom-key-bindings)
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
 - [Programming modes](#programming-modes)
@@ -42,7 +42,7 @@ Just clone it in your $HOME directory:
 git clone --depth 1 https://github.com/romanoaugusto88/evilmacs ~/.emacs.d
 ```
 
-## Installed plugins
+## Plugins
 These plugins will be installed automatically when you open Emacs for the first time:
 
 - [evil](https://gitorious.org/evil/evil)
@@ -85,6 +85,8 @@ These plugins will be installed automatically when you open Emacs for the first 
 - [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 ## Custom key bindings
+Consider <kbd>C</kbd> as <kbd>Ctrl</kbd> and <kbd>M</kbd> as <kbd>Alt</kbd> or <kbd>Command</kbd>, depending on OS.
+
 | Key binding                 | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
 | -----------                 | -----------                                                        | ---------     | -----------   | ------------  |
 | <kbd>C-p</kbd>              | Find files                                                         | y             | y             | y             |
@@ -107,7 +109,6 @@ These plugins will be installed automatically when you open Emacs for the first 
 | <kbd>tab</kbd>              | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
 | <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
 
-`C` is <kbd>Ctrl</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
 
