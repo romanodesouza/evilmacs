@@ -7,6 +7,7 @@
 (key-chord-define-global ",d" 'helm-semantic-or-imenu)
 (key-chord-define-global ",g" 'switch-to-previous-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
+(key-chord-define-global ",x" 'smex)
 (key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",v" 'evil-window-vsplit)
 

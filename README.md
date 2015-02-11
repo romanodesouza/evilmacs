@@ -99,6 +99,7 @@ These plugins will be installed automatically when you open Emacs for the first 
 | <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
 | <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                               | y             | y             | y             |
 | <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
+| <kbd>,</kbd><kbd>x</kbd>    | Call sme **x**                                                     | y             | y             | y             |
 | <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                              | y             | y             | y             |
 | <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                                | y             | y             | y             |
 | <kbd>M-/</kbd>              | Alternative search using helm-swoop                                | y             | y             | y             |
