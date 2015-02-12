@@ -1,5 +1,6 @@
 (require-package 'key-chord)
 
+(key-chord-define-global ",q" 'kill-and-close)
 (key-chord-define-global ",w" 'delete-other-windows)
 (key-chord-define-global ",e" 'end-of-line)
 (key-chord-define-global ",a" 'ag-project-regexp)
@@ -7,6 +8,7 @@
 (key-chord-define-global ",d" 'helm-semantic-or-imenu)
 (key-chord-define-global ",g" 'switch-to-previous-buffer)
 (key-chord-define-global ",h" 'evil-ex-nohighlight)
+(key-chord-define-global ",x" 'smex)
 (key-chord-define-global ",b" 'switch-to-buffer)
 (key-chord-define-global ",v" 'evil-window-vsplit)
 
@@ -17,6 +19,12 @@
 
 (defun disable-key-chord-mode ()
   (set (make-local-variable 'input-method-function) nil))
+
+; kill buffer and close window
+(defun kill-and-close ()
+  (interactive)
+  (kill-this-buffer)
+  (delete-window))
 
 ; Switch to previous buffer
 (defun switch-to-previous-buffer ()

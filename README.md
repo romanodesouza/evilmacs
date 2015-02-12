@@ -1,5 +1,26 @@
-# .emacs.d
+# evilmacs
 Emacs settings for vim users.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Motivation](#motivation)
+- [How?](#how)
+- [Screenshot](#screenshot)
+- [Requirements](#requirements)
+- [Install](#install)
+- [Plugins](#installed-plugins)
+- [Custom key bindings](#custom-key-bindings)
+  - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
+- [Programming modes](#programming-modes)
+  - [Go](#go)
+  - [Javascript](#javascript)
+- [Other modes](#other-modes)
+- [Customizing](#customizing)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Motivation
 Vim is a great and powerful editor with awesome and clever motions for fast editing, but when you intend to use it like an ide with some plugins, it becomes slow, mainly because its lack of asynchronous I/O.
@@ -17,32 +38,83 @@ The specific requirements are listed below. From here you need to install Emacs 
 ## Install
 Just clone it in your $HOME directory:
 
-`git clone --depth 1 https://github.com/romanoaugusto88/.emacs.d ~/.emacs.d`
+```
+git clone --depth 1 https://github.com/romanoaugusto88/evilmacs ~/.emacs.d
+```
+
+## Plugins
+These plugins will be installed automatically when you open Emacs for the first time:
+
+- [evil](https://gitorious.org/evil/evil)
+- [evil-nerd-commenter](https://github.com/redguardtoo/evil-nerd-commenter)
+- [evil-jumper](https://github.com/bling/evil-jumper)
+- [evil-visualstar](https://github.com/bling/evil-visualstar)
+- [evil-matchit](https://github.com/redguardtoo/evil-matchit)
+- [key-chord](http://www.emacswiki.org/emacs/key-chord.el)
+- [linum-relative](https://github.com/coldnew/linum-relative)
+- [projectile](https://github.com/bbatsov/projectile)
+- [expand-region](https://github.com/magnars/expand-region.el)
+- [ag](https://github.com/Wilfred/ag.el)
+- [smooth-scrolling](https://github.com/aspiers/smooth-scrolling)
+- [smex](https://github.com/nonsequitur/smex)
+- [ido-vertical-mode](https://github.com/gempesaw/ido-vertical-mode.el)
+- [ido-ubiquitous](https://github.com/DarwinAwardWinner/ido-ubiquitous)
+- [flx-ido](https://github.com/lewang/flx)
+- [helm](https://github.com/emacs-helm/helm)
+- [helm-swoop](https://github.com/ShingoFukuyama/helm-swoop)
+- [smart-mode-line](https://github.com/Bruce-Connor/smart-mode-line)
+- [company-mode](https://github.com/company-mode/company-mode)
+- [flycheck](https://github.com/flycheck/flycheck)
+- [yasnippet](https://github.com/capitaomorte/yasnippet)
+- [dockerfile-mode](https://github.com/spotify/dockerfile-mode)
+- [nginx-mode](https://github.com/ajc/nginx-mode)
+- [go-mode](https://github.com/dominikh/go-mode.el)
+- [go-eldoc](https://github.com/syohex/emacs-go-eldoc)
+- [go-snippets](https://github.com/toumorokoshi/go-snippets)
+- [company-go](https://github.com/nsf/gocode)
+- [js2-mode](https://github.com/mooz/js2-mode)
+- [tern](https://github.com/marijnh/tern)
+- [company-tern](https://github.com/proofit404/company-tern)
+- [web-beautify](https://github.com/yasuyk/web-beautify)
+- [scss-mode](https://github.com/antonj/scss-mode)
+- [rainbow-mode](http://elpa.gnu.org/packages/rainbow-mode.html)
+- [css-eldoc](https://github.com/zenozeng/css-eldoc)
+- [php-mode](https://github.com/ejmr/php-mode)
+- [web-mode](https://github.com/fxbois/web-mode)
+- [emmet-mode](https://github.com/smihica/emmet-mode)
+- [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 ## Custom key bindings
-| Key binding                 | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                 | -----------                                                        | ---------     | -----------   | ------------  |
-| <kbd>C-p</kbd>              | Find files                                                         | y             | y             | y             |
-| <kbd>C-=</kbd>              | Expand selection                                                   | y             | y             | y             |
-| <kbd>C--</kbd>              | Contract selection                                                 | y             | y             | y             |
-| <kbd>C-]</kbd>              | Jump to definition                                                 | n             | y             | y             |
-| <kbd>K</kbd>                | Show doc                                                           | n             | y             | y             |
-| <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                                 | y             | y             | y             |
-| <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                           | y             | y             | y             |
-| <kbd>,</kbd><kbd>a</kbd>    | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
-| <kbd>,</kbd><kbd>s</kbd>    | **s** ave and goes to normal mode                                  | y             | y             | y             |
-| <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
-| <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                               | y             | y             | y             |
-| <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
-| <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                              | y             | y             | y             |
-| <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                                | y             | y             | y             |
-| <kbd>M-/</kbd>              | Alternative search using helm-swoop                                | y             | y             | y             |
-| <kbd>tab</kbd>              | Expand snippet or print a tab stop                                 | y             | y             | y             |
-| <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
+Consider <kbd>C</kbd> as <kbd>Ctrl</kbd>, <kbd>S</kbd> as <kbd>Shift</kbd> and <kbd>M</kbd> as <kbd>Alt</kbd> or <kbd>Command</kbd>, depending on OS.
 
-`C` is <kbd>Ctrl</kbd> and `M` could be <kbd>Alt</kbd> or <kbd>Command</kbd> depending on OS.
+| Key binding                      | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                      | -----------                                                        | ---------     | -----------   | ------------  |
+| <kbd>C-p</kbd>                   | Find files                                                         | y             | y             | y             |
+| <kbd>C-=</kbd>                   | Expand selection                                                   | y             | y             | y             |
+| <kbd>C--</kbd>                   | Contract selection                                                 | y             | y             | y             |
+| <kbd>C-]</kbd> or <kbd>gd</kbd>  | Jump to definition                                                 | n             | y             | y             |
+| <kbd>K</kbd>                     | Show doc                                                           | n             | y             | y             |
+| <kbd>,</kbd><kbd>q</kbd>         | Kill buffer and **q** uit indow                                    | y             | y             | y             |
+| <kbd>,</kbd><kbd>w</kbd>         | Delete another opened **w** indows                                 | y             | y             | y             |
+| <kbd>,</kbd><kbd>e</kbd>         | Goes to **e** nd of line                                           | y             | y             | y             |
+| <kbd>,</kbd><kbd>a</kbd>         | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
+| <kbd>,</kbd><kbd>s</kbd>         | **s** ave and goes to normal mode                                  | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>         | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
+| <kbd>,</kbd><kbd>g</kbd>         | To **g** gle with last opened buffer                               | y             | y             | y             |
+| <kbd>,</kbd><kbd>h</kbd>         | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
+| <kbd>,</kbd><kbd>x</kbd>         | Call sme **x**                                                     | y             | y             | y             |
+| <kbd>,</kbd><kbd>b</kbd>         | Switch to **b** uffer                                              | y             | y             | y             |
+| <kbd>,</kbd><kbd>v</kbd>         | **v** ertical split                                                | y             | y             | y             |
+| <kbd>C-return</kbd>              | Open new line below                                                | y             | y             | y             |
+| <kbd>S-return</kbd>              | Open new line above                                                | y             | y             | y             |
+| <kbd>M-/</kbd>                   | Alternative search using helm-swoop                                | y             | y             | y             |
+| <kbd>tab</kbd>                   | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
+| <kbd>f5</kbd>                    | Revert buffer                                                      | y             | y             | y             |
+
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
+
+Note 2: The key bindings leading with <kbd>,</kbd> has a delay and should be pressed quickly, otherwise, the keyboard characters will be printed.
 
 ### Key bindings from evil-nerd-commenter plugin
 | Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
@@ -87,25 +159,16 @@ npm install tern
 npm install js-beautify 
 ```
 
-### HTML
-Custom key bindings:
-
-| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>d</kbd>  | Delete open and close tag, and then reindent buffer  | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>f</kbd>  | Skip tag forward                                     | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>b</kbd>  | Skip tag backward                                    | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>t</kbd><kbd>c</kbd>  | Close tag                                            | n             | y             | y             |
-
-#### Jinja2 mode
-| Key binding                             | Action                                               | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                             | -----------                                          | ---------     | -----------   | ------------  |
-| <kbd>SPC</kbd><kbd>j</kbd><kbd>o</kbd>  | Insert jinja2 tag(`{% %}`)                           | n             | y             | y             |
-| <kbd>SPC</kbd><kbd>j</kbd><kbd>c</kbd>  | Close jinja2 tag(Ex.: `{% endblock %}`)              | n             | y             | y             |
-
-
 ## Other modes
-There are a basic, but very good support to `nginx`, `Dockerfile`, `php`, `yaml`, `css` and `scss` modes.
+There are a basic, but very good support to:
+
+- NGINX
+- Dockerfile
+- php
+- yaml
+- html
+- css
+- scss
 
 ## Customizing
 You can change the color theme, font face, add or change some key bindings without touching the general config

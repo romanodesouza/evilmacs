@@ -10,6 +10,9 @@
 (global-set-key (kbd "<f5>") 'revert-buffer-no-confirm)
 ; Smart beginning of line
 (global-set-key [home] 'smart-beginning-of-line)
+; Opening lines
+(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<S-return>") 'open-line-above)
 
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
@@ -25,5 +28,20 @@
     (back-to-indentation)
     (and (= oldpos (point))
          (beginning-of-line))))
+
+; Open line below
+(defun open-line-below ()
+  (interactive)
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command))
+
+; Open line above
+(defun open-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (forward-line -1)
+  (indent-for-tab-command))
 
 (provide 'init-key-bindings)

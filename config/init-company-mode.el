@@ -6,6 +6,7 @@
 (setq company-tooltip-limit 20)
 (setq company-dabbrev-ignore-case t)
 (setq company-dabbrev-downcase nil)
+(setq company-backends '(company-dabbrev company-dabbrev-code company-file))
 
 (global-company-mode)
 
