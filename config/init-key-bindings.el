@@ -12,7 +12,7 @@
 (global-set-key [home] 'smart-beginning-of-line)
 ; Opening lines
 (global-set-key (kbd "<C-return>") 'open-line-below)
-(global-set-key (kbd "<C-S-return>") 'open-line-above)
+(global-set-key (kbd "<S-return>") 'open-line-above)
 
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."

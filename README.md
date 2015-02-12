@@ -85,32 +85,36 @@ These plugins will be installed automatically when you open Emacs for the first 
 - [yaml-mode](https://github.com/yoshiki/yaml-mode)
 
 ## Custom key bindings
-Consider <kbd>C</kbd> as <kbd>Ctrl</kbd> and <kbd>M</kbd> as <kbd>Alt</kbd> or <kbd>Command</kbd>, depending on OS.
+Consider <kbd>C</kbd> as <kbd>Ctrl</kbd>, <kbd>S</kbd> as <kbd>Shift</kbd> and <kbd>M</kbd> as <kbd>Alt</kbd> or <kbd>Command</kbd>, depending on OS.
 
-| Key binding                 | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
-| -----------                 | -----------                                                        | ---------     | -----------   | ------------  |
-| <kbd>C-p</kbd>              | Find files                                                         | y             | y             | y             |
-| <kbd>C-=</kbd>              | Expand selection                                                   | y             | y             | y             |
-| <kbd>C--</kbd>              | Contract selection                                                 | y             | y             | y             |
-| <kbd>C-]</kbd>              | Jump to definition                                                 | n             | y             | y             |
-| <kbd>K</kbd>                | Show doc                                                           | n             | y             | y             |
-| <kbd>,</kbd><kbd>q</kbd>    | Kill buffer and **q** uit indow                                    | y             | y             | y             |
-| <kbd>,</kbd><kbd>w</kbd>    | Delete another opened **w** indows                                 | y             | y             | y             |
-| <kbd>,</kbd><kbd>e</kbd>    | Goes to **e** nd of line                                           | y             | y             | y             |
-| <kbd>,</kbd><kbd>a</kbd>    | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
-| <kbd>,</kbd><kbd>s</kbd>    | **s** ave and goes to normal mode                                  | y             | y             | y             |
-| <kbd>,</kbd><kbd>d</kbd>    | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
-| <kbd>,</kbd><kbd>g</kbd>    | To **g** gle with last opened buffer                               | y             | y             | y             |
-| <kbd>,</kbd><kbd>h</kbd>    | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
-| <kbd>,</kbd><kbd>x</kbd>    | Call sme **x**                                                     | y             | y             | y             |
-| <kbd>,</kbd><kbd>b</kbd>    | Switch to **b** uffer                                              | y             | y             | y             |
-| <kbd>,</kbd><kbd>v</kbd>    | **v** ertical split                                                | y             | y             | y             |
-| <kbd>M-/</kbd>              | Alternative search using helm-swoop                                | y             | y             | y             |
-| <kbd>tab</kbd>              | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
-| <kbd>f5</kbd>               | Revert buffer                                                      | y             | y             | y             |
+| Key binding                      | Action                                                             | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                      | -----------                                                        | ---------     | -----------   | ------------  |
+| <kbd>C-p</kbd>                   | Find files                                                         | y             | y             | y             |
+| <kbd>C-=</kbd>                   | Expand selection                                                   | y             | y             | y             |
+| <kbd>C--</kbd>                   | Contract selection                                                 | y             | y             | y             |
+| <kbd>C-]</kbd> or <kbd>gd</kbd>  | Jump to definition                                                 | n             | y             | y             |
+| <kbd>K</kbd>                     | Show doc                                                           | n             | y             | y             |
+| <kbd>,</kbd><kbd>q</kbd>         | Kill buffer and **q** uit indow                                    | y             | y             | y             |
+| <kbd>,</kbd><kbd>w</kbd>         | Delete another opened **w** indows                                 | y             | y             | y             |
+| <kbd>,</kbd><kbd>e</kbd>         | Goes to **e** nd of line                                           | y             | y             | y             |
+| <kbd>,</kbd><kbd>a</kbd>         | **a** g: find in files(requires [ag](http://geoff.greer.fm/ag/))   | y             | y             | y             |
+| <kbd>,</kbd><kbd>s</kbd>         | **s** ave and goes to normal mode                                  | y             | y             | y             |
+| <kbd>,</kbd><kbd>d</kbd>         | Goes to symbol **d** efinition in current buffer                   | y             | y             | y             |
+| <kbd>,</kbd><kbd>g</kbd>         | To **g** gle with last opened buffer                               | y             | y             | y             |
+| <kbd>,</kbd><kbd>h</kbd>         | Clear previous **h** ighlighted search in current buffer           | y             | y             | y             |
+| <kbd>,</kbd><kbd>x</kbd>         | Call sme **x**                                                     | y             | y             | y             |
+| <kbd>,</kbd><kbd>b</kbd>         | Switch to **b** uffer                                              | y             | y             | y             |
+| <kbd>,</kbd><kbd>v</kbd>         | **v** ertical split                                                | y             | y             | y             |
+| <kbd>C-return</kbd>              | Open new line below                                                | y             | y             | y             |
+| <kbd>S-return</kbd>              | Open new line above                                                | y             | y             | y             |
+| <kbd>M-/</kbd>                   | Alternative search using helm-swoop                                | y             | y             | y             |
+| <kbd>tab</kbd>                   | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
+| <kbd>f5</kbd>                    | Revert buffer                                                      | y             | y             | y             |
 
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
+
+Note 2: The key bindings leading with <kbd>,</kbd> has a delay and should be pressed quickly, otherwise, the keyboard characters will be printed.
 
 ### Key bindings from evil-nerd-commenter plugin
 | Key binding                           | Action                           | Insert Mode   | Normal Mode   | Visual Mode   |
