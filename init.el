@@ -80,6 +80,7 @@
 
 (require 'init-go-mode)
 (require 'init-javascript-mode)
+(require 'init-lua-mode)
 (require 'init-web-mode)
 (require 'init-yaml-mode)
 

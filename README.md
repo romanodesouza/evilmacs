@@ -164,6 +164,7 @@ There are a basic, but very good support to:
 
 - NGINX
 - Dockerfile
+- lua
 - php
 - yaml
 - html
