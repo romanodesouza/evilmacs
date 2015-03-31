@@ -14,7 +14,7 @@ Emacs settings for vim users.
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
 - [Programming modes](#programming-modes)
   - [Go](#go)
-  - [Javascript](#javascript)
+  - [JavaScript](#javascript)
 - [Other modes](#other-modes)
 - [Customizing](#customizing)
 - [License](#license)
@@ -108,7 +108,7 @@ Custom key bindings:
 | <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>c</kbd>  | Go oracle callers     | n             | y             | n             |
 | <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>s</kbd>  | Go oracle callstack   | n             | y             | n             |
 
-### Javascript
+### JavaScript
 It uses tern and support js-beautify after saving the file.
 Install:
 ```
