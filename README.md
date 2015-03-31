@@ -8,6 +8,7 @@ Emacs settings for vim users.
 - [Motivation](#motivation)
 - [How?](#how)
 - [Screenshot](#screenshot)
+- [Supported versions](#supported-versions)
 - [Install](#install)
 - [Custom key bindings](#custom-key-bindings)
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
@@ -30,9 +31,10 @@ Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim e
 ## Screenshot
 ![Screenshot](http://oi61.tinypic.com/2n0pirs.jpg "Emacs in Go mode")
 
-## Install
-Ensure you have Emacs >=24 installed and clone evilmacs into your $HOME directory:
+## Supported versions
+Emacs >= 24
 
+## Install
 ```
 git clone --depth 1 https://github.com/romanoaugusto88/evilmacs ~/.emacs.d
 ```
