@@ -5,6 +5,7 @@
 (require-package 'php-mode)
 (require-package 'emmet-mode)
 
+(setq web-mode-enable-control-block-indentation nil)
 (setq web-mode-engines-alist '(("jinja2" . "\\.html\\'") ("jinja2" . "\\.volt\\'")))
 (setq-default scss-compile-at-save nil)
 
