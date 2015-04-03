@@ -13,7 +13,7 @@ Emacs settings for vim users.
 - [Custom key bindings](#custom-key-bindings)
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
   - [Multiple cursors](#multiple-cursors)
-- [Programming modes setup](#programming-modes-setup)
+- [Programming modes](#programming-modes)
   - [Go](#go)
   - [JavaScript](#javascript)
 - [Other modes](#other-modes)
@@ -94,7 +94,7 @@ Note 2: The key bindings leading with <kbd>,</kbd> has a delay and should be pre
 | <kbd>C-S-mouse1</kbd>             | Add new cursor on click                                   | y             | y             | y             | 
 
 
-## Programming modes setup
+## Programming modes
 
 ### Go
 ```
@@ -125,8 +125,6 @@ npm install js-beautify
 ```
 
 ## Other modes
-There are a basic, but very good support to:
-
 - NGINX
 - Dockerfile
 - lua
