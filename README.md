@@ -8,13 +8,14 @@ Emacs settings for vim users.
 - [Motivation](#motivation)
 - [How?](#how)
 - [Screenshot](#screenshot)
-- [Requirements](#requirements)
+- [Supported versions](#supported-versions)
 - [Install](#install)
 - [Custom key bindings](#custom-key-bindings)
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
-- [Programming modes](#programming-modes)
+  - [Multiple cursors](#multiple-cursors)
+- [Programming modes setup](#programming-modes-setup)
   - [Go](#go)
-  - [Javascript](#javascript)
+  - [JavaScript](#javascript)
 - [Other modes](#other-modes)
 - [Customizing](#customizing)
 - [License](#license)
@@ -31,12 +32,10 @@ Thanks to [evil-mode](http://www.emacswiki.org/Evil). It's simply the best vim e
 ## Screenshot
 ![Screenshot](http://oi61.tinypic.com/2n0pirs.jpg "Emacs in Go mode")
 
-## Requirements
-The specific requirements are listed below. From here you need to install Emacs >=24.
+## Supported versions
+Emacs >= 24
 
 ## Install
-Just clone it in your $HOME directory:
-
 ```
 git clone --depth 1 https://github.com/romanoaugusto88/evilmacs ~/.emacs.d
 ```
@@ -67,6 +66,7 @@ Consider <kbd>C</kbd> as <kbd>Ctrl</kbd>, <kbd>S</kbd> as <kbd>Shift</kbd> and <
 | <kbd>M-/</kbd>                   | Alternative search using helm-swoop                                | y             | y             | y             |
 | <kbd>tab</kbd>                   | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
 | <kbd>f5</kbd>                    | Revert buffer                                                      | y             | y             | y             |
+| <kbd>f11</kbd>                   | Enter distraction free mode                                        | y             | y             | y             |
 
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
@@ -84,11 +84,19 @@ Note 2: The key bindings leading with <kbd>,</kbd> has a delay and should be pre
 | <kbd>,</kbd><kbd>c</kbd><kbd>r</kbd>  | Comment or uncomment region      | n             | y             | n             |
 
 
-## Programming modes
+### Multiple cursors
+| Binding                           | Action                                                    | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                       | -----------                                               | ---------     | -----------   | ------------  |
+| <kbd>C-></kbd>                    | Mark next occurrence of selected region                   | n             | n             | y             |
+| <kbd>C-<</kbd>                    | Mark previous occurrence of selected region               | n             | n             | y             |
+| <kbd>C-,</kbd>                    | Mark all occurrences of selected region                   | n             | n             | y             |
+| <kbd>C-;</kbd>                    | Mark next occurrence of selected region interactively     | n             | y             | y             |
+| <kbd>C-S-mouse1</kbd>             | Add new cursor on click                                   | y             | y             | y             | 
+
+
+## Programming modes setup
 
 ### Go
-First of all, you need to know that Emacs should be aware about the `$GOPATH` env variable. The easy way is just open it from the shell.
-Now install:
 ```
 go get golang.org/x/tools/cmd/goimports
 go get golang.org/x/tools/cmd/oracle
@@ -98,6 +106,8 @@ go get github.com/golang/lint
 go get github.com/nsf/gocode
 go get code.google.com/p/rog-go/exp/cmd/godef
 ```
+Tip: Emacs must be aware of `$GOPATH` env variable. The easy way is just open it from the shell.
+
 
 Custom key bindings:
 
@@ -108,9 +118,7 @@ Custom key bindings:
 | <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>c</kbd>  | Go oracle callers     | n             | y             | n             |
 | <kbd>SPC</kbd><kbd>g</kbd><kbd>o</kbd><kbd>s</kbd>  | Go oracle callstack   | n             | y             | n             |
 
-### Javascript
-It uses tern and support js-beautify after saving the file.
-Install:
+### JavaScript
 ```
 npm install tern
 npm install js-beautify 
@@ -129,8 +137,7 @@ There are a basic, but very good support to:
 - scss
 
 ## Customizing
-You can change the color theme, font face, add or change some key bindings without touching the general config
-by creating a file `local-config/init-local-config.el`. Something like that:
+You can customize evilmacs by creating a `local-config/init-local-config.el` file like the example below:
 ```lisp
 ; Load color theme
 (require-package 'color-theme-solarized)
@@ -139,7 +146,7 @@ by creating a file `local-config/init-local-config.el`. Something like that:
 (provide 'init-local-config)
 ```
 
-For a more realistic example, check out [my personal config](https://github.com/romanoaugusto88/dotfiles/tree/master/emacs).
+For a more realistic example, check out [this one](https://github.com/romanoaugusto88/dotfiles/tree/master/emacs/init-local-config.el).
 
 ## License
 The MIT License (MIT)

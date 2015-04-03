@@ -74,6 +74,8 @@
 (require 'init-company-mode)
 (require 'init-flycheck)
 (require 'init-yasnippet)
+(require 'init-multiple-cursors)
+(require 'init-distraction-free)
 
 (require 'init-dockerfile-mode)
 (require 'init-nginx-mode)
@@ -93,13 +95,8 @@
 ;;
 ;; Default theme
 ;
-(if (display-graphic-p)
-  (progn
-    (require-package 'seti-theme)
-    (load-theme 'seti t))
-  (progn
-    (require-package 'ujelly-theme)
-    (load-theme 'ujelly t)))
+(require-package 'seti-theme)
+(load-theme 'seti t)
 
 ;;
 ;; Local Config
