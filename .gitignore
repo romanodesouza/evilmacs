@@ -5,3 +5,4 @@ eshell/
 local-config/*
 !local-config/README.md
 .mc-lists.el
+node_modules/
