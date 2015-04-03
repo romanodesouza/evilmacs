@@ -95,13 +95,8 @@
 ;;
 ;; Default theme
 ;
-(if (display-graphic-p)
-  (progn
-    (require-package 'seti-theme)
-    (load-theme 'seti t))
-  (progn
-    (require-package 'ujelly-theme)
-    (load-theme 'ujelly t)))
+(require-package 'seti-theme)
+(load-theme 'seti t)
 
 ;;
 ;; Local Config
