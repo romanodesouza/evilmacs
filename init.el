@@ -75,6 +75,7 @@
 (require 'init-flycheck)
 (require 'init-yasnippet)
 (require 'init-multiple-cursors)
+(require 'init-distraction-free)
 
 (require 'init-dockerfile-mode)
 (require 'init-nginx-mode)

@@ -66,6 +66,7 @@ Consider <kbd>C</kbd> as <kbd>Ctrl</kbd>, <kbd>S</kbd> as <kbd>Shift</kbd> and <
 | <kbd>M-/</kbd>                   | Alternative search using helm-swoop                                | y             | y             | y             |
 | <kbd>tab</kbd>                   | Expand snippet/emmet or print a tab stop                           | y             | y             | y             |
 | <kbd>f5</kbd>                    | Revert buffer                                                      | y             | y             | y             |
+| <kbd>f11</kbd>                   | Enter distraction free mode                                        | y             | y             | y             |
 
 
 Note: Use <kbd>C-n</kbd> and <kbd>C-p</kbd> to cycle between menu items, like company or ido.
