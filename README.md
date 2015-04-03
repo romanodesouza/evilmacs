@@ -12,6 +12,7 @@ Emacs settings for vim users.
 - [Install](#install)
 - [Custom key bindings](#custom-key-bindings)
   - [Key bindings from evil-nerd-commenter plugin](#key-bindings-from-evil-nerd-commenter-plugin)
+  - [Multiple cursors](#multiple-cursors)
 - [Programming modes setup](#programming-modes-setup)
   - [Go](#go)
   - [JavaScript](#javascript)
@@ -80,6 +81,16 @@ Note 2: The key bindings leading with <kbd>,</kbd> has a delay and should be pre
 | <kbd>,</kbd><kbd>c</kbd><kbd>c</kbd>  | Copy and comment lines           | n             | y             | n             |
 | <kbd>,</kbd><kbd>c</kbd><kbd>p</kbd>  | Comment or uncomment paragraphs  | n             | y             | n             |
 | <kbd>,</kbd><kbd>c</kbd><kbd>r</kbd>  | Comment or uncomment region      | n             | y             | n             |
+
+
+### Multiple cursors
+| Binding                           | Action                                                    | Insert Mode   | Normal Mode   | Visual Mode   |
+| -----------                       | -----------                                               | ---------     | -----------   | ------------  |
+| <kbd>C-></kbd>                    | Mark next occurrence of selected region                   | n             | n             | y             |
+| <kbd>C-<</kbd>                    | Mark previous occurrence of selected region               | n             | n             | y             |
+| <kbd>C-,</kbd>                    | Mark all occurrences of selected region                   | n             | n             | y             |
+| <kbd>C-;</kbd>                    | Mark next occurrence of selected region interactively     | n             | y             | y             |
+| <kbd>C-S-mouse1</kbd>             | Add new cursor on click                                   | y             | y             | y             | 
 
 
 ## Programming modes setup
