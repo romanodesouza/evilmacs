@@ -3,7 +3,9 @@
 
 ; Electric pair mode
 (defun my-local-electric-pair-mode ()
-  (make-variable-buffer-local 'electric-pair-mode)
-  (electric-pair-mode t))
+  (when electric-pair-mode
+    (progn
+      (make-variable-buffer-local 'electric-pair-mode)
+      (electric-pair-mode t))))
 
 (provide 'init-electric)
