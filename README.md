@@ -149,8 +149,6 @@ You can customize evilmacs by creating a `local-config/init-local-config.el` fil
 (provide 'init-local-config)
 ```
 
-For a more realistic example, check out [this one](https://github.com/romanoaugusto88/dotfiles/tree/master/emacs/init-local-config.el).
-
 ## License
 The MIT License (MIT)
 
