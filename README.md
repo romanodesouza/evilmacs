@@ -2,9 +2,7 @@
 Emacs settings for vim users.
 
 # DEPRECATION WARNING
-Although these confs still works, I'm deprecating it in favor to [spacemacs](https://github.com/syl20bnr/spacemacs). Both shares the same philosophy but the last one is much more popular. Actually I did not know about its existence when I've started evilmacs.
-
-Let's not fragment the community and build a better editor together.
+Although these confs still works, I'm deprecating it in favor to [spacemacs](https://github.com/syl20bnr/spacemacs).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
