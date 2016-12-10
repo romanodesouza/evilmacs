@@ -1,8 +1,5 @@
-# evilmacs
+# evilmacs (DEPRECATED)
 Emacs settings for vim users.
-
-# DEPRECATION WARNING
-Although these confs still works, I'm deprecating it in favor to [spacemacs](https://github.com/syl20bnr/spacemacs).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
